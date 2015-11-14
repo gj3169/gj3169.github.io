@@ -1,78 +1,101 @@
-# Jekyll-Bootstrap
+# Abstract
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-## Usage
+You can visit [here](http://gaohaoyang.github.io) to see this blog.
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
+这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
 
-## Version
+博客访问地址：[点击这里](http://gaohaoyang.github.io)
 
-0.3.0 - stable and versioned using [semantic versioning](http://semver.org/).
+**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
-**NOTE:** 0.3.0 introduces a new theme which is not backwards compatible in the sense it won't _look_ like the old version.
-However, the actual API has not changed at all.
-You might want to run 0.3.0 in a branch to make sure you are ok with the theme design changes.
+---
 
-## Milestones
+# Update
 
-[0.4.0](https://github.com/plusjade/jekyll-bootstrap/milestones/v%200.4.0) - next release [ETA 03/29/2015]
+## 2015/05/25
 
-### GOALS
+* Fix bug of footer jumping
+* Add response interactive of demo page
 
-* No open PRs against master branch.
-* Squash some bugs.
-* Add some new features (low-hanging fruit).
-* Establish social media presence.
+---
+
+# About Theme
+
+This is a blog theme based on jekyll. You can use on your own blog. Before you use it, please click a star on [this respository](https://github.com/Gaohaoyang/gaohaoyang.github.io/). You will encourage me to do more great things!
+
+## Sample
+
+### static view
+
+![blog sample](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blog sample.png)
+
+### active view
+
+![blog-blogShow1](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blogShow1.gif)
+
+![blog-blogShow2](http://7q5cdt.com1.z0.glb.clouddn.com/blog-blogShow2.gif)
+
+## Attention
+
+When you use this theme. Please make sure to add the author's info, like this: Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang) or Designed by [Gaohaoyang](https://github.com/Gaohaoyang) 
+
+While you should delete statistics code in _includes/head.html.
+
+like this:
+
+```javascript
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?**************************";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+```
+
+And you should change the duoshuo comment code in _layouts/default.html.
+
+like this:
+
+```javascript
+var duoshuoQuery = {short_name:"******"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})(); 
+``` 
+
+---
+
+Thank you.
+Here is my blog: [HyG](http://gaohaoyang.github.io)
+
+---
+
+LICENSE
+
+[MIT License](https://github.com/Gaohaoyang/gaohaoyang.github.io/blob/master/LICENSE.md)
+
+<!--
+
+## 被引用信息
+
+使用了我的模板并写明来源的人：   
+
+* [dreamholy](http://dreamholy.github.io/)
+
+没有注明来源的人：
+
+* [yangshuailing](http://yangshuailing.github.io/com/)
+* [huapu728](http://huapu728.github.io/)
+* [greatbuger](http://greatbuger.github.io/) 
 
 
-### Bugs
-
-|Bug |Description
-|------|---------------
-|[#86](https://github.com/plusjade/jekyll-bootstrap/issues/86)  |&#x2611; Facebook Comments
-|[#113](https://github.com/plusjade/jekyll-bootstrap/issues/113)|&#x2611; ASSET_PATH w/ page & post
-|[#144](https://github.com/plusjade/jekyll-bootstrap/issues/144)|&#x2610; BASE_PATH w/ FQDN
-|[#227](https://github.com/plusjade/jekyll-bootstrap/issues/227)|&#x2611; Redundant JB/setup
-
-### Features
-
-|Bug |Description
-|------|---------------
-|[#98](https://github.com/plusjade/jekyll-bootstrap/issues/98)  |&#x2611; GIST Integration
-|[#244](https://github.com/plusjade/jekyll-bootstrap/issues/244)|&#x2611; JB/file_exists Helper
-|[#42](https://github.com/plusjade/jekyll-bootstrap/issues/42)  |&#x2611; Sort collections of Pages / Posts
-|[#84](https://github.com/plusjade/jekyll-bootstrap/issues/84)  |&#x2610; Detecting production mode
-
-### TODOS
-
-Review existing pull requests against plusjake/jekyll-bootstrap:master. Merge or close each.
-
-* Create twitter account. Add link / icon on jekyllbootstrap.com.
-* Create blog posts under plusjade/gh-pages, expose on jekyllbootstrap.com, feed to twitter account.
-* Announce state of project, announce roadmap(s), announce new versions as they’re released.
-
-## Contributing
+-->
 
 
-To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-This is very important as it allows me to accept your pull request without having to publish a public version release.
-
-Small, atomic Features, bugs, etc.
-Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.
-Please rebase as often as possible when working.
-Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-
-For Big Features or major API extensions/edits:
-This is the one case where I'll accept pull-requests based off the master branch.
-This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-Translation : it might take a bit longer so please be patient! (but sincerely thank you).
-
-**Jekyll-Bootstrap Documentation Website.**
-
-The documentation website at <http://jekyllbootstrap.com> is maintained at https://github.com/plusjade/jekyllbootstrap.com
-
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
