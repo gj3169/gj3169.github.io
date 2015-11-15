@@ -52,7 +52,7 @@ cat: /dev/ppp: Permission denied
 
 如图：检测PPP模块开启的返回信息
 
-[<img class="alignnone size-full wp-image-163" src="http://simongong.net/wp-content/uploads/2015/09/QQ截图20150928111256.png" alt="QQ截图20150928111256" width="592" height="314" />][1]
+[<img class="alignnone size-full wp-image-163" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/09/QQ-image-20150928111256.png" alt="QQ-image-20150928111256" width="592" height="314" />][1]
 
 <span style="color: #ff0000;">第三步，<span style="color: #000000;">下载vpn(CentOS6专用)一键安装包</p> 
 
@@ -99,4 +99,4 @@ chmod a+x vpn_centos6.sh
     至此，VPN已经搭建完成，用你的手机或电脑连接试试看，享受无界的自由网络吧！
   </p>
 
- [1]: http://simongong.net/wp-content/uploads/2015/09/QQ截图20150928111256.png
+ [1]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/09/QQ-image-20150928111256.png

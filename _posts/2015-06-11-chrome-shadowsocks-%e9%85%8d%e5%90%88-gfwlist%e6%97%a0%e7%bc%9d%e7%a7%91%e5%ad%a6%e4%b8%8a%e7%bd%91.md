@@ -29,7 +29,7 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 进入chrome，打开SwitchyOmega的设置界面，新建一个profile
 
-[<img class="  wp-image-77 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611215726.png" alt="QQ截圖20150611215726" width="1013" height="516" />][1]
+[<img class="  wp-image-77 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611215726.png" alt="QQ-image-20150611215726" width="1013" height="516" />][1]
 
 &nbsp;
 
@@ -37,7 +37,7 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 在新建界面选择如下，起一个名字（自己记住就好，随意起名）
 
-[<img class="  wp-image-78 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611215856.png" alt="QQ截圖20150611215856" width="1261" height="647" />][2]
+[<img class="  wp-image-78 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611215856.png" alt="QQ-image-20150611215856" width="1261" height="647" />][2]
 
 &nbsp;
 
@@ -45,13 +45,13 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 下一步，port端口号需要与你的shadowsocks客户端的端口号一致，我这里设置的是60001，别忘了点击apply changes
 
-[<img class="  wp-image-79 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220010.png" alt="QQ截圖20150611220010" width="1146" height="604" />][3]
+[<img class="  wp-image-79 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220010.png" alt="QQ-image-20150611220010" width="1146" height="604" />][3]
 
 &nbsp;
 
 下面再新建一个profile，但类型与刚才不同，这次选Switch Profile
 
-[<img class="  wp-image-80 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220102.png" alt="QQ截圖20150611220102" width="1188" height="623" />][4]
+[<img class="  wp-image-80 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220102.png" alt="QQ-image-20150611220102" width="1188" height="623" />][4]
 
 &nbsp;
 
@@ -61,13 +61,13 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 选择完毕后有如下界面，点击add a rule list
 
-[<img class="  wp-image-81 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220215.png" alt="QQ截圖20150611220215" width="1172" height="566" />][5]
+[<img class="  wp-image-81 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220215.png" alt="QQ-image-20150611220215" width="1172" height="566" />][5]
 
 &nbsp;
 
 然后，这一步比较重要，其中Rule list URL 填上  http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt ，如下图所示，其他的选项也填好。最后点击Download Profile Now， 最最后点击apply changes 保存好
 
-[<img class="  wp-image-82 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220302.png" alt="QQ截圖20150611220302" width="1151" height="705" />][6]
+[<img class="  wp-image-82 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220302.png" alt="QQ-image-20150611220302" width="1151" height="705" />][6]
 
 &nbsp;
 
@@ -75,16 +75,16 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 最后一步，选择刚才建立的Switch Profile （切换规则）
 
-[<img class="  wp-image-83 aligncenter" src="http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220332.png" alt="QQ截圖20150611220332" width="405" height="627" />][7]
+[<img class="  wp-image-83 aligncenter" src="http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220332.png" alt="QQ-image-20150611220332" width="405" height="627" />][7]
 
 &nbsp;
 
 现在畅快的玩耍吧！
 
- [1]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611215726.png
- [2]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611215856.png
- [3]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220010.png
- [4]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220102.png
- [5]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220215.png
- [6]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220302.png
- [7]: http://simongong.net/wp-content/uploads/2015/06/QQ截圖20150611220332.png
+ [1]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611215726.png
+ [2]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611215856.png
+ [3]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220010.png
+ [4]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220102.png
+ [5]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220215.png
+ [6]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220302.png
+ [7]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/06/QQ-image-20150611220332.png
