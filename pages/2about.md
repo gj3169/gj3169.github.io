@@ -13,7 +13,8 @@ icon: glyphicon-heart
 
 #### 友情链接
 
-[面具下的是思想](http://www.wooyun.cc/)
+
+[面具下的是思想](http://www.wooyun.cc/)|[HyG](http://gaohaoyang.github.io/)
 
 Comment below to exchange link with me.  
 
