@@ -99,4 +99,3 @@ chmod a+x vpn_centos6.sh
     至此，VPN已经搭建完成，用你的手机或电脑连接试试看，享受无界的自由网络吧！
   </p>
 
- [1]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/09/QQ-image-20150928111256.png
