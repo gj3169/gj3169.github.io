@@ -1,97 +1,86 @@
 ---
 layout: default
+title: "liberize's blog"
+tagline: "Free as the wind."
+description: "一个码农的技术博客，分享折腾的点点滴滴"
 ---
-<div id="index" class="row">
-  <div class="col-sm-9">
-    <div class="post-area">
-      <!-- small button -->
-     <!--  <p class="pull-right visible-xs">
-       <button>toggle</button>
-     </p> -->
-      <div class="post-list-header">
-        Posts
-      </div>
-      <div class="post-list-body">
-        
-        <div class="all-posts" post-cate="All">
-          {% for post in paginator.posts %}
-            <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
-              <h2>
-              {{ post.title }}
-              </h2>
-              <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
-            </a>
+{% include JB/setup %}
 
+<!-- Recent Posts  -->
+<section>
+  {% for post in paginator.posts %}
+  <article class="nested">
 
+    <header>
+      <h2><a href="{{ post.url }}" title="查看《{{ post.title }}》">{{ post.title }}</a></h2>
+    </header>
 
-          {% endfor %}
-          <!-- 分页 -->
-      <div class="paginator">
-              {% if paginator.total_pages > 1 %}
-              <!-- 分页代码 -->
-              {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
-        {% endif %}
+    <section>
+      <p>
+        {{ post.content | strip_html | truncate:300 }}
+      </p>
+      <a class="button-link" href="{{ post.url }}" title="查看全文">read more</a>
+    </section>
 
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              <span class="active">{{ page }}</span>
-            {% elsif page == 1 %}
-              <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-            {% else %}
-              <a href="/{{ site.paginate_path | prepend: site.url | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-            {% endif %}
-        {% endfor %}
+    <footer>
+      <p>
+        发表日期：<a href="{{ site.JB.archive_path }}#{{ post.date | date: '%B-%Y' }}" title="查看此月所有文章">{{ post.date | date: "%d %B %Y" }}</a>，
+        作者：<a href="mailto:{{ site.author.email }}" title="向作者发送邮件">{{ site.author.name }}</a>，
+        类别：<a href="{{ site.JB.categories_path }}#{{ post.category }}-ref" title="查看此类别下的所有文章">{{ post.category }}</a>{% if site.JB.comments.provider == 'duoshuo' %}，
+        评论：<a href="{{ post.url }}#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="{{ post.title }}" data-count-type="comments"></span></a>{% endif %}
+      </p>
+    </footer>
 
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页</a>
-        {% endif %}
-              {% endif %}
-      </div>
-      
+  </article>
+  {% endfor %}
 
+  {% if site.JB.comments.provider == 'duoshuo' %}
+    {% assign duoshuo = 'jsonly' %}
+    {% include JB/comments-providers/duoshuo %}
+  {% endif %}
 
-        </div>
-        <!-- <div class="posts-in-categories"> -->
-        {% for category in site.categories %}
-          <div post-cate="{{category | first}}">
-            {% for posts in category  %}
-              {% for post in posts %}
-                {% if post.url %}
-                  <a href="{{ post.url | prepend: site.baseurl }}" class="post-list-item">
-                    <h2>
-                    {{ post.title }}
-                    </h2>
-                    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
-                  </a>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </div>
-        {% endfor %}
-        
-        <!-- </div> -->
-      </div>
-      
+</section>
 
-     
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="shadow-corner-curl hidden-xs">
-      <div class="categories-list-header">
-        Categories
-      </div>
-      
-      <a href="{{'/index.html' | prepend: site.baseurl}}" class="categories-list-item" cate="All">
-        All<span class="my-badge"> {{site.posts | size}}</span>
-      </a>
-      {% for category in site.categories order:ascending %}
-        <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
-          {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+<!-- Pagination Links -->
+<section class="pagination pagination-centered">
+  <ul>
+    <!-- First Page -->
+    {% if paginator.previous_page %}
+    <li><a href="/index.html">&laquo;&laquo;</a></li>
+    {% else %}
+    <li class="disabled"><a href="#">&laquo;&laquo;</a></li>
+    {% endif %}
 
+    <!-- Previous Page -->
+    {% if paginator.previous_page %}
+    <li>
+      {% if paginator.previous_page == 1 %}
+      <a href="/index.html">&laquo;</a>
+      {% else %}
+      <a href="/page{{ paginator.previous_page }}">&laquo;</a>
+      {% endif %}
+    </li>
+    {% else %}
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    {% endif %}
+
+    <!-- Current Page -->
+    <li class="active">
+      <span class="page_number ">第 {{ paginator.page }}/{{ paginator.total_pages }} 页</span>
+    </li>
+
+    <!-- Next Page -->
+    {% if paginator.next_page %}
+    <li><a href="/page{{paginator.next_page}}">&raquo;</a></li>
+    {% else %}
+    <li class="disabled"><a href="#">&raquo;</a></li>
+    {% endif %}
+
+    <!-- Last Page -->
+    {% if paginator.next_page %}
+    <li><a href="/page{{ paginator.total_pages }}">&raquo;&raquo;</a></li>
+    {% else %}
+    <li class="disabled"><a href="#">&raquo;&raquo;</a></li>
+    {% endif %}
+  </ul>
+</section>

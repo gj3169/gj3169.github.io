@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
+
+  
+  <title>运营商流量资费降价难在哪儿 - 西蒙宫的博客</title>
+  
+  
+  <meta name="author" content="西蒙宫">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/themes//css/style.css">
+  <link rel="stylesheet" href="/assets/themes//css/font-awesome.min.css">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="/assets/themes//js/jquery-1.10.1.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <header id="top">
+      <!-- Home Link -->
+      <a id="logo" href="/" title="回到首页">
+        <img src="/assets/themes//img/logo.png" alt="西蒙宫的博客">
+      </a>
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/" title="首页">首页</a>
+          </li>
+          <li>
+            <a href="/categories.html" title="分类">分类</a>
+          </li>
+          <li>
+            <a href="/tags.html" title="标签">标签</a>
+          </li>
+          <li>
+            <a href="/messages.html" title="留言板">留言板</a>
+          </li>
+          <li id="about-link" >
+            <a href="/about.html" title="关于我">关于我</a>
+          </li>
+          <li id="rss-link">
+            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <section id="search-box">
+          <form id="search-form">
+  <input id="query" type="text" placeholder="正则搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+  var entries = null;
+
+  function htmlEscape(s) {
+    return String(s).replace(/[&<>"'\/]/g, function(s) {
+      var entityMap = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': '&quot;',
+        "'": '&#39;',
+        "/": '&#x2F;'
+      };
+      return entityMap[s];
+    });
+  }
+
+  function xmlDateToJavascriptDate(xmlDate) {
+    var re = /^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(\.[0-9]+)?(Z|([+-])([0-9]{2}):([0-9]{2}))?$/;
+    var match = xmlDate.match(re);
+    if (!match)
+      return null;
+
+    var all = match[0];
+    var year = match[1];  var month = match[2];  var day = match[3];
+    var hour = match[4];  var minute = match[5]; var second = match[6];
+    var milli = match[7]; 
+    var z_or_offset = match[8];  var offset_sign = match[9]; 
+    var offset_hour = match[10]; var offset_minute = match[11];
+
+    if (offset_sign) {
+      var direction = (offset_sign == "+" ? 1 : -1);
+      hour =   parseInt(hour)   + parseInt(offset_hour)   * direction;
+      minute = parseInt(minute) + parseInt(offset_minute) * direction;
+    }
+    month = parseInt(month) - 1;
+    var utcDate = Date.UTC(year, month, day, hour, minute, second, (milli || 0));
+    return new Date(utcDate);
+  }
+
+  function formatDate(date) {
+    var monthNames = [ "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December" ];
+    return date.getDate() + ' ' + monthNames[date.getMonth()] + ' ' + date.getFullYear();
+  }
+
+  function findEntries(q) {
+    var matches = [];
+    var rq = new RegExp(q, 'im');
+    var rl = /\/([^\/]+)\.html$/;
+    for (var i = 0; i < entries.length; i++) {
+      var entry = entries[i];
+      var title = $(entry.getElementsByTagName('title')[0]).text();
+      var link = $(entry.getElementsByTagName('link')[0]).attr('href');
+      var title_en = rl.exec(link)[1].replace(/-/g, ' ');
+      var content = $(entry.getElementsByTagName('content')[0]).text();          
+      if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+        var updated = formatDate(xmlDateToJavascriptDate($(entry.getElementsByTagName('updated')[0]).text()));
+        matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
+      }
+    }
+    var html = '';
+    for (var i = 0; i < matches.length; i++) {
+      var match = matches[i]; 
+      html += '<article class="nested">';
+      html += '<header><h2><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h2></header>';
+      html += '<section><p>' + htmlEscape(match.content) + '</p></section>';
+      html += '<footer><p>更新日期：' + match.date + '</p></footer>';
+      html += '</article>';
+    }
+    $('#main-content').html(html);
+    $('#loader').hide();
+    $('#main-content').show();
+  }
+
+  $('#search-form').submit(function() {
+    var query = $('#query').val();
+    $('#query').blur().attr('disabled', true);
+    $('#main-content').hide();
+    $('#loader').show();
+    if (entries == null) {
+      $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
+        entries = data.getElementsByTagName('entry');
+        findEntries(query);
+      }});
+    } else {
+      findEntries(query);
+    }
+    $('#query').blur().attr('disabled', false);
+    return false;
+  });
+
+});
+</script>
+
+        </section>
+        <section class="active">
+          <a href="/archive.html" title="查看所有文章"><i class="icon-fixed-width icon-file-text"></i> 最近发表</a>
+<span title="文章总数">27</span>
+<ul>
+
+  <li><a href="/2015/11/19/bokeqianyidaogithub/" title="查看《博客迁移到github，基于jekyll》">博客迁移到github，基于jekyll</a></li>
+
+  <li><a href="/2015/10/30/e5-b8-a6-e6-9c-89p2p-e6-80-9d-e6-83-b3-e7-9a-84-e6-96-87-e4-bb-b6-e5-90-8c-e6-ad-a5-e5-b7-a5-e5-85-b7-e7-ae-80-e4-bb-8b-bittorrent-sync-ef-bc-88-e6-96-87-e5-86-85-e5-85-bc-e6-9c-89/" title="查看《带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）》">带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）</a></li>
+
+  <li><a href="/2015/10/python%e4%b8%ad%e6%96%87%e4%b9%b1%e7%a0%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/" title="查看《python中文乱码解决方案》">python中文乱码解决方案</a></li>
+
+  <li><a href="/2015/10/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8e%a8%e8%8d%90/" title="查看《搜索引擎推荐》">搜索引擎推荐</a></li>
+
+  <li><a href="/2015/09/%e6%90%ad%e5%bb%bavpn%ef%bc%8c%e4%bd%8e%e4%bb%b7%e4%ba%ab%e7%94%a8%e8%87%aa%e5%b7%b1%e7%8b%ac%e4%ba%ab%e7%9a%84vpn/" title="查看《搭建VPN，低价享用自己独享的VPN》">搭建VPN，低价享用自己独享的VPN</a></li>
+
+  <li><a href="/2015/08/%e7%ba%aa%e5%bf%b5shadowsocks%e9%99%aa%e6%88%91%e4%bb%ac%e8%b5%b0%e8%bf%87%e7%9a%84%e8%bf%99%e5%87%a0%e4%b8%aa%e6%9c%88/" title="查看《纪念shadowsocks陪我走过的这几个月》">纪念shadowsocks陪我走过的这几个月</a></li>
+
+  <li><a href="/2015/08/%e6%96%b0%e7%9a%84%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91%e5%b7%a5%e5%85%b7lantern/" title="查看《新的科学上网工具Lantern》">新的科学上网工具Lantern</a></li>
+
+  <li><a href="/2015/07/%e5%8e%9f%e5%88%9b%e6%8e%a8%e8%8d%90%e4%b8%80%e4%b9%a6%e3%80%8a%e5%8f%a4%e4%bb%8a%e6%95%b0%e5%ad%a6%e6%80%9d%e6%83%b3%e3%80%8b/" title="查看《推荐一书《古今数学思想》》">推荐一书《古今数学思想》</a></li>
+
+  <li><a href="/2015/06/%e7%95%99%e8%a8%80%e6%9d%bf/" title="查看《留言板》">留言板</a></li>
+
+  <li><a href="/2015/06/%e9%ab%98%e6%95%88%e5%b7%a5%e4%bd%9c%e7%a7%98%e8%af%80%ef%bc%88%e6%9d%a5%e8%87%aa%e4%b8%80%e7%af%87%e8%8b%b1%e6%96%87%e6%96%87%e7%ab%a0%ef%bc%89/" title="查看《高效工作秘诀（来自一篇英文文章）》">高效工作秘诀（来自一篇英文文章）</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
+<span title="分类总数">3</span>
+<ul>
+
+  <li><a href="/categories.html#未分类-ref">未分类 (23)</a></li>
+
+  <li><a href="/categories.html#Mail-ref">Mail (3)</a></li>
+
+  <li><a href="/categories.html#Coding-ref">Coding (1)</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
+<span title="标签总数">53</span>
+<div id="tag-cloud">
+
+
+
+  
+  <a href="/tags.html#受限-ref" style="font-size: 9pt; color: #999;">受限</a>
+
+  
+  <a href="/tags.html#批处理-ref" style="font-size: 9pt; color: #999;">批处理</a>
+
+  
+  <a href="/tags.html#无线网-ref" style="font-size: 9pt; color: #999;">无线网</a>
+
+  
+  <a href="/tags.html#centos-ref" style="font-size: 9pt; color: #999;">centos</a>
+
+  
+  <a href="/tags.html#debian-ref" style="font-size: 9pt; color: #999;">debian</a>
+
+  
+  <a href="/tags.html#linux-ref" style="font-size: 15pt; color: #333;">linux</a>
+
+  
+  <a href="/tags.html#shadowsocks-ref" style="font-size: 18pt; color: #000;">shadowsocks</a>
+
+  
+  <a href="/tags.html#一键-ref" style="font-size: 9pt; color: #999;">一键</a>
+
+  
+  <a href="/tags.html#脚本-ref" style="font-size: 9pt; color: #999;">脚本</a>
+
+  
+  <a href="/tags.html#GUI-ref" style="font-size: 9pt; color: #999;">GUI</a>
+
+  
+  <a href="/tags.html#matlab-ref" style="font-size: 9pt; color: #999;">matlab</a>
+
+  
+  <a href="/tags.html#popup-ref" style="font-size: 9pt; color: #999;">popup</a>
+
+  
+  <a href="/tags.html#关闭-ref" style="font-size: 9pt; color: #999;">关闭</a>
+
+  
+  <a href="/tags.html#日本-ref" style="font-size: 9pt; color: #999;">日本</a>
+
+  
+  <a href="/tags.html#百度-ref" style="font-size: 9pt; color: #999;">百度</a>
+
+  
+  <a href="/tags.html#流量-ref" style="font-size: 9pt; color: #999;">流量</a>
+
+  
+  <a href="/tags.html#资费-ref" style="font-size: 9pt; color: #999;">资费</a>
+
+  
+  <a href="/tags.html#运营商-ref" style="font-size: 9pt; color: #999;">运营商</a>
+
+  
+  <a href="/tags.html#降价-ref" style="font-size: 9pt; color: #999;">降价</a>
+
+  
+  <a href="/tags.html#直角-ref" style="font-size: 9pt; color: #999;">直角</a>
+
+  
+  <a href="/tags.html#钝角-ref" style="font-size: 9pt; color: #999;">钝角</a>
+
+  
+  <a href="/tags.html#上火-ref" style="font-size: 9pt; color: #999;">上火</a>
+
+  
+  <a href="/tags.html#google-ref" style="font-size: 12pt; color: #666;">google</a>
+
+  
+  <a href="/tags.html#打不开-ref" style="font-size: 9pt; color: #999;">打不开</a>
+
+  
+  <a href="/tags.html#谷歌-ref" style="font-size: 9pt; color: #999;">谷歌</a>
+
+  
+  <a href="/tags.html#习惯-ref" style="font-size: 9pt; color: #999;">习惯</a>
+
+  
+  <a href="/tags.html#人生-ref" style="font-size: 9pt; color: #999;">人生</a>
+
+  
+  <a href="/tags.html#性格-ref" style="font-size: 9pt; color: #999;">性格</a>
+
+  
+  <a href="/tags.html#改善-ref" style="font-size: 9pt; color: #999;">改善</a>
+
+  
+  <a href="/tags.html#交往-ref" style="font-size: 9pt; color: #999;">交往</a>
+
+  
+  <a href="/tags.html#男女-ref" style="font-size: 9pt; color: #999;">男女</a>
+
+  
+  <a href="/tags.html#迟到-ref" style="font-size: 9pt; color: #999;">迟到</a>
+
+  
+  <a href="/tags.html#VPS-ref" style="font-size: 9pt; color: #999;">VPS</a>
+
+  
+  <a href="/tags.html#搬瓦工-ref" style="font-size: 9pt; color: #999;">搬瓦工</a>
+
+  
+  <a href="/tags.html#chrome-ref" style="font-size: 9pt; color: #999;">chrome</a>
+
+  
+  <a href="/tags.html#科学上网-ref" style="font-size: 15pt; color: #333;">科学上网</a>
+
+  
+  <a href="/tags.html#翻墙-ref" style="font-size: 9pt; color: #999;">翻墙</a>
+
+  
+  <a href="/tags.html#压缩-ref" style="font-size: 9pt; color: #999;">压缩</a>
+
+  
+  <a href="/tags.html#解压-ref" style="font-size: 9pt; color: #999;">解压</a>
+
+  
+  <a href="/tags.html#flash-ref" style="font-size: 9pt; color: #999;">flash</a>
+
+  
+  <a href="/tags.html#ubuntu-ref" style="font-size: 9pt; color: #999;">ubuntu</a>
+
+  
+  <a href="/tags.html#bt-ref" style="font-size: 9pt; color: #999;">bt</a>
+
+  
+  <a href="/tags.html#搜索-ref" style="font-size: 9pt; color: #999;">搜索</a>
+
+  
+  <a href="/tags.html#种子-ref" style="font-size: 9pt; color: #999;">种子</a>
+
+  
+  <a href="/tags.html#高效-ref" style="font-size: 9pt; color: #999;">高效</a>
+
+  
+  <a href="/tags.html#Lantern-ref" style="font-size: 9pt; color: #999;">Lantern</a>
+
+  
+  <a href="/tags.html#PPTP-ref" style="font-size: 9pt; color: #999;">PPTP</a>
+
+  
+  <a href="/tags.html#VPN-ref" style="font-size: 9pt; color: #999;">VPN</a>
+
+  
+  <a href="/tags.html#搭建-ref" style="font-size: 9pt; color: #999;">搭建</a>
+
+  
+  <a href="/tags.html#快搜-ref" style="font-size: 9pt; color: #999;">快搜</a>
+
+  
+  <a href="/tags.html#搜索引擎-ref" style="font-size: 9pt; color: #999;">搜索引擎</a>
+
+  
+  <a href="/tags.html#BitTorrent Sync-ref" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
+
+  
+  <a href="/tags.html#文件同步-ref" style="font-size: 9pt; color: #999;">文件同步</a>
+
+
+</div>
+
+        </section>
+        <div id="fixed-container">
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-code"></i> 代码仓库</a>
+<ul>
+  <li><a href="http://github.com/liberize/liberize.github.com" target="_blank">本博客源码</a></li>
+  <li><a href="http://github.com/liberize/alfred-dict-workflow" target="_blank">Alfred 查词 workflow</a></li>
+  <li><a href="http://github.com/liberize/rhythmbox-doubanfm-plugin" target="_blank">Rhythmbox 豆瓣 FM 插件</a></li>
+  <li><a href="http://github.com/liberize/rhythmbox-osdlyrics-plugin" target="_blank">Rhythmbox 歌词插件</a></li>
+  <li><a href="http://github.com/liberize/sublime-text-plugins" target="_blank">Sublime Text 的一些小插件</a></li>
+  <li><a href="http://github.com/liberize/flame-detection-system" target="_blank">基于视频的火焰检测系统</a></li>
+</ul>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<div id="contacts-list">
+  <a href="mailto:liberize@gmail.com" target="_blank" title="Gmail">
+    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  </a>
+  <a href="https://github.com/liberize" target="_blank" title="Github">
+    <i class="icon-large icon-fixed-width icon-github"></i>
+  </a>
+  <a href="http://weibo.com/liberize" target="_blank" title="新浪微博">
+    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  </a>
+  <a href="https://plus.google.com/118314345733357791088/" target="_blank" title="Google+">
+    <i class="icon-large icon-fixed-width icon-google-plus"></i>
+  </a>
+  <a href="https://twitter.com/liberize" target="_blank" title="Twitter">
+    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  </a>
+</div>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+</ul>
+
+  </section>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var position = $('#fixed-container').offset();
+  $(window).scroll(function() {
+    if($(window).scrollTop() > position.top) {
+      $('#fixed-container').css('position','fixed').css('top','0');
+    } else {
+      $('#fixed-container').css('position','static');
+    }
+  });
+  if(matchMedia) {
+    var mq = matchMedia('(max-width: 999px)');
+    mq.addListener(function(mql) {
+      if (!mql.matches) {
+        position = $('#fixed-container').offset();
+      }
+    });
+  }
+});
+</script>
+
+      </aside>
+
+      <!-- Main Content -->
+      <div id="main-inner">
+        <div id="loader"><img src="/assets/themes//img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          
+
+<section id="content">
+  <article class="post">
+
+    <header>
+      <h1>运营商流量资费降价难在哪儿</h1>
+    </header>
+
+    <section>
+      <div class="post-extra">
+        <div class="pull-left">
+          <span>22 April 2015</span>
+        </div>
+        <div class="pull-right">
+          <!-- Baidu Share Buttons -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_tsina"></a>
+<a class="bds_qzone"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<a class="bds_fbook"></a>
+<a class="bds_twi"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+
+        </div>
+      </div>
+      <p>长期以来广为诟病的网速慢、流量资费高等问题又一次站在舆论风口。近日，国务院总理李克强提出敦促相关部门研究如何把流量费降下来，实现“薄利多销”。随后，电信运营商率先下调宽带固网费用。业界指出，流量资费存在50%的下降空间，不过这并非朝夕就能实现，将伴随着4G用户数量增加、基础设施完善同步进行，这也进一步刺激运营商加快流量经营的转型和业务模式的创新。</p>
+
+<p><strong>　　互联网厂商再度开炮</strong></p>
+
+<p>近日，在国务院总理李克强主持召开的经济形势座谈会上，<span id="usstock_NTES"><a class="keyword f_st" href="http://stock.finance.sina.com.cn/usstock/quotes/NTES.html" target="_blank">网易</a></span><span id="quote_NTES"></span>董事局主席兼CEO丁磊呼吁网速提上去、资费降下来，引起了国务院的关注和重视。之后不久，工信部公开表态，将推动企业加大网络投资，降低手机流量资费，已立即布置相关企业研究落实。</p>
+
+<p>值得一提的是，丁磊并不是第一个炮轰运营商网速慢、资费高问题的人。在此之前，包括阿里巴巴董事局主席<a class="wt_article_link" href="http://weibo.com/mayun?zw=tech" target="_blank">马云</a>、<span id="usstock_SOHU"><a class="keyword f_st" href="http://stock.finance.sina.com.cn/usstock/quotes/SOHU.html" target="_blank">搜狐</a></span><span id="quote_SOHU"></span>董事局主席张朝阳、<span id="usstock_DANG"><a class="keyword f_st" href="http://stock.finance.sina.com.cn/usstock/quotes/DANG.html" target="_blank">当当网</a></span><span id="quote_DANG"></span>CEO<a class="wt_article_link" href="http://weibo.com/u/1878923963?zw=tech" target="_blank">李国庆</a>等都曾对流量费用有颇多微词。其中，张朝阳此前解读搜狐财报时多次提出，搜狐视频业务每年要花费大额的带宽购买费用，成为视频业务“烧钱”困局难解的一个重要原因。除此之外，经营网络音频业务的创业型公司喜马拉雅FM联席CEO余建军也曾透露，带宽购买成本已达数百万元。</p>
+
+<p>观察人士指出，无论固网宽带还是移动宽带，可以说是承载几乎所有互联网应用的底层网络，重要性不言而喻。互联网厂商希望借助社会舆论向相关部门和三大运营商施压，进一步改善网络质量，下调带宽费用，由此更好地提供各种互联网应用和服务。事实上，在过去一两年间，互联网企业的OTT应用已对运营商的传统业务造成冲击，运营商逐渐沦为网络管道，但管道核心资源仍掌握在运营商手中，互联网企业仍需要向运营商支付一定的带宽费用，在互联网应用免费成主流的情况下，降低带宽成本自然成为普遍性的需求。</p>
+
+<p><strong>　　国内外差距引争议</strong></p>
+
+<p>互联网企业的诘责，使一直以来对运营商资费高的社会大众“讨伐”声音再一次甚嚣尘上，而且公众大多形成了国内资费远高于国外水平的认知。</p>
+
+<p>独立电信行业分析师付亮指出，国内无论固网宽带还是移动宽带，网速与欧美国家相比有明显差距。固网宽带落后美国约五年，移动宽带落后发达国家平均水平约四年。</p>
+
+<p>而通信专家<a class="wt_article_link" href="http://weibo.com/xiangligang?zw=tech" target="_blank">项立刚</a>则并不同意国内通信资费高的观点，他指出，资费被指偏高，与4G网络发展、普及程度及运营商摊平前期大量基础设施建设成本有关。实际上，国内三大运营商的竞争是异常惨烈的。北京商报记者从三大运营商官网获悉，目前4G套餐含1GB流量的价格约在120-150元，还内含400-500分钟的通话时长。由于日韩、欧美运营商的业务类型及内容不同，虽并没有直接可比性的数据，但国内的资费水平确实处于中等偏下。</p>
+
+<p>另有业内人士认为，与国外电信业一个很大的不同是，国内电信市场在一定程度上受到了管理体制的束缚，网络经营有着不同的市场主体，但却有着血缘关系，并未放开拳脚展开实质性的竞争，与此同时，运营商内部的发展驱动力不足，业务模式缺乏创新。</p>
+
+<p>一位不愿具名的来自运营商内部的人士叫屈称，运营商既要保证持续的盈利能力，有着严格的KPI考核制度，又要顾及社会公共事业，投入巨大的建设成本，回报却十分有限，这显然是一个悖论。</p>
+
+<p><strong>　流量经营迫在眉睫</strong></p>
+
+<p>尽管运营商有着自己的委屈，但不可否认的是，在政府部门重视、社会舆论施压的情况下，4G流量资费将迎来下降。截至发稿前，北京商报记者分别致电三大运营商，了解到运营商目前还并未公布降资费的政策，但已在内部商讨。</p>
+
+<p>流量资费下调，对三大运营商来说，一个直接的后果就是摊薄盈利。近年来，传统的营收主力——语音及短信业务急剧萎缩，运营商向流量经营转型，数据业务在三大运营商营收结构中的比重已接近或超过一半，而流量业务盈利空间进一步压缩，将使运营商的转型之路再遇变数。</p>
+
+<p>据中国移动最新发布的2015年一季度未经审计财报显示，中国移动总营收为1608.57亿元，同比微增3.9%；净利润238.3亿元，同比出现5.6%的降幅。而在此之前，中国移动在2014年实现6414亿元的营收，相比上年微增1.8%，净利润为1093亿元，尽管这一数字仍很漂亮，但与中国移动自身同比却出现了10.2%的降幅，成为16年来的最大跌幅。</p>
+
+<p>专家指出，工信部已经表态，三大运营商再度下调4G流量资费已是板上钉钉的事情，这倒逼着电信运营商加快流量经营的步伐。更为重要的是，流量经营不能只局限于单纯的流量销售，还需要通过创新实现流量的多元化模式。不过这需要一定的时间，不太可能出现断崖式的下降。</p>
+
+<p>北京商报记者 吴辰光 曲忠芳/文 胡潇/制图</p>
+
+      
+      <footer>
+        <p>
+          本作品由 <a href="mailto:ximenggong@outlook.com">西蒙宫</a> 创作，采用
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="查看协议详细信息" target="_blank">CC BY-NC-SA 3.0 许可协议</a>
+          进行许可。
+        </p>
+      </footer>
+      
+    </section>
+
+  </article>
+</section>
+
+<section>
+
+  
+  <ul class="tag-box inline">
+    <li><i class="icon-large icon-folder-open"></i></li>
+    
+    
+
+
+  
+     
+    	<li><a href="/categories.html#未分类-ref">
+    		未分类 <span>23</span>
+    	</a></li>
+    
+  
+
+
+
+  </ul>
+  
+
+  
+  <ul class="tag-box inline">
+    <li><i class="icon-large icon-tags"></i></li>
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#流量-ref">流量 <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#资费-ref">资费 <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#运营商-ref">运营商 <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#降价-ref">降价 <span>1</span></a></li>
+    
+  
+
+
+
+  </ul>
+  
+
+  <div class="pagination">
+    <ul>
+      
+      <li class="prev"><a href="/2015/04/zheshiyigeiftttceshi/" title="这是一个ifttt测试">&larr; 上一篇</a></li>
+      
+      <li><a href="/archive.html">文章列表</a></li>
+      
+      <li class="next"><a href="/2015/04/dunjiaodengyuzhijiao/" title="钝角等于直角？！">下一篇 &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+</section>
+
+<section id="comments">
+  
+
+
+  
+<div id="ds-thread" class="ds-thread" data-url="http://simongong.net/2015/04/yunyingshangliuliangzifeijiangjiananzainaer/" data-title="运营商流量资费降价难在哪儿" data-thread-key="运营商流量资费降价难在哪儿" data-author-key="西蒙宫"></div>
+<div style="clear: both;"></div>
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name: 'ximenggong'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+
+
+</section>
+
+
+        </div>
+      </div>
+
+      <div id="back-top">
+  <a href="#top" title="回到顶部"></a>
+</div>
+<script type="text/javascript">
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+</script>
+
+
+    </section>
+
+    <footer id="bottom">
+      <p align="center">&copy; 2015 西蒙宫
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">$('article.post a').attr('target', '_blank');</script>
+  
+
+  
+</body>
+</html>
+

@@ -1,0 +1,897 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
+
+  
+  <title>liberize's blog - 西蒙宫的博客</title>
+  
+  <meta name="description" content="一个码农的技术博客，分享折腾的点点滴滴">
+  <meta name="author" content="西蒙宫">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="/assets/themes/twitter/js/jquery-1.10.1.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <header id="top">
+      <!-- Home Link -->
+      <a id="logo" href="/" title="回到首页">
+        <img src="/assets/themes/twitter/img/logo.png" alt="西蒙宫的博客">
+      </a>
+      <!-- Navigation Bar -->
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="/" title="首页">首页</a>
+          </li>
+          <li>
+            <a href="/categories.html" title="分类">分类</a>
+          </li>
+          <li>
+            <a href="/tags.html" title="标签">标签</a>
+          </li>
+          <li>
+            <a href="/messages.html" title="留言板">留言板</a>
+          </li>
+          <li id="about-link" >
+            <a href="/about.html" title="关于我">关于我</a>
+          </li>
+          <li id="rss-link">
+            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main">
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <section id="search-box">
+          <form id="search-form">
+  <input id="query" type="text" placeholder="正则搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+  var entries = null;
+
+  function htmlEscape(s) {
+    return String(s).replace(/[&<>"'\/]/g, function(s) {
+      var entityMap = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': '&quot;',
+        "'": '&#39;',
+        "/": '&#x2F;'
+      };
+      return entityMap[s];
+    });
+  }
+
+  function xmlDateToJavascriptDate(xmlDate) {
+    var re = /^([0-9]{4,})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(\.[0-9]+)?(Z|([+-])([0-9]{2}):([0-9]{2}))?$/;
+    var match = xmlDate.match(re);
+    if (!match)
+      return null;
+
+    var all = match[0];
+    var year = match[1];  var month = match[2];  var day = match[3];
+    var hour = match[4];  var minute = match[5]; var second = match[6];
+    var milli = match[7]; 
+    var z_or_offset = match[8];  var offset_sign = match[9]; 
+    var offset_hour = match[10]; var offset_minute = match[11];
+
+    if (offset_sign) {
+      var direction = (offset_sign == "+" ? 1 : -1);
+      hour =   parseInt(hour)   + parseInt(offset_hour)   * direction;
+      minute = parseInt(minute) + parseInt(offset_minute) * direction;
+    }
+    month = parseInt(month) - 1;
+    var utcDate = Date.UTC(year, month, day, hour, minute, second, (milli || 0));
+    return new Date(utcDate);
+  }
+
+  function formatDate(date) {
+    var monthNames = [ "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December" ];
+    return date.getDate() + ' ' + monthNames[date.getMonth()] + ' ' + date.getFullYear();
+  }
+
+  function findEntries(q) {
+    var matches = [];
+    var rq = new RegExp(q, 'im');
+    var rl = /\/([^\/]+)\.html$/;
+    for (var i = 0; i < entries.length; i++) {
+      var entry = entries[i];
+      var title = $(entry.getElementsByTagName('title')[0]).text();
+      var link = $(entry.getElementsByTagName('link')[0]).attr('href');
+      var title_en = rl.exec(link)[1].replace(/-/g, ' ');
+      var content = $(entry.getElementsByTagName('content')[0]).text();          
+      if (rq.test(title) || rq.test(title_en) || rq.test(content)) {
+        var updated = formatDate(xmlDateToJavascriptDate($(entry.getElementsByTagName('updated')[0]).text()));
+        matches.push({'title': title, 'link': link, 'date': updated, 'content': content});
+      }
+    }
+    var html = '';
+    for (var i = 0; i < matches.length; i++) {
+      var match = matches[i]; 
+      html += '<article class="nested">';
+      html += '<header><h2><a href="' + match.link + '">' + htmlEscape(match.title) + '</a></h2></header>';
+      html += '<section><p>' + htmlEscape(match.content) + '</p></section>';
+      html += '<footer><p>更新日期：' + match.date + '</p></footer>';
+      html += '</article>';
+    }
+    $('#main-content').html(html);
+    $('#loader').hide();
+    $('#main-content').show();
+  }
+
+  $('#search-form').submit(function() {
+    var query = $('#query').val();
+    $('#query').blur().attr('disabled', true);
+    $('#main-content').hide();
+    $('#loader').show();
+    if (entries == null) {
+      $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
+        entries = data.getElementsByTagName('entry');
+        findEntries(query);
+      }});
+    } else {
+      findEntries(query);
+    }
+    $('#query').blur().attr('disabled', false);
+    return false;
+  });
+
+});
+</script>
+
+        </section>
+        <section>
+          <a href="/archive.html" title="查看所有文章"><i class="icon-fixed-width icon-file-text"></i> 最近发表</a>
+<span title="文章总数">27</span>
+<ul>
+
+  <li><a href="/2015/11/19/bokeqianyidaogithub/" title="查看《博客迁移到github，基于jekyll》">博客迁移到github，基于jekyll</a></li>
+
+  <li><a href="/2015/10/30/e5-b8-a6-e6-9c-89p2p-e6-80-9d-e6-83-b3-e7-9a-84-e6-96-87-e4-bb-b6-e5-90-8c-e6-ad-a5-e5-b7-a5-e5-85-b7-e7-ae-80-e4-bb-8b-bittorrent-sync-ef-bc-88-e6-96-87-e5-86-85-e5-85-bc-e6-9c-89/" title="查看《带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）》">带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）</a></li>
+
+  <li><a href="/2015/10/python%e4%b8%ad%e6%96%87%e4%b9%b1%e7%a0%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/" title="查看《python中文乱码解决方案》">python中文乱码解决方案</a></li>
+
+  <li><a href="/2015/10/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8e%a8%e8%8d%90/" title="查看《搜索引擎推荐》">搜索引擎推荐</a></li>
+
+  <li><a href="/2015/09/%e6%90%ad%e5%bb%bavpn%ef%bc%8c%e4%bd%8e%e4%bb%b7%e4%ba%ab%e7%94%a8%e8%87%aa%e5%b7%b1%e7%8b%ac%e4%ba%ab%e7%9a%84vpn/" title="查看《搭建VPN，低价享用自己独享的VPN》">搭建VPN，低价享用自己独享的VPN</a></li>
+
+  <li><a href="/2015/08/%e7%ba%aa%e5%bf%b5shadowsocks%e9%99%aa%e6%88%91%e4%bb%ac%e8%b5%b0%e8%bf%87%e7%9a%84%e8%bf%99%e5%87%a0%e4%b8%aa%e6%9c%88/" title="查看《纪念shadowsocks陪我走过的这几个月》">纪念shadowsocks陪我走过的这几个月</a></li>
+
+  <li><a href="/2015/08/%e6%96%b0%e7%9a%84%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91%e5%b7%a5%e5%85%b7lantern/" title="查看《新的科学上网工具Lantern》">新的科学上网工具Lantern</a></li>
+
+  <li><a href="/2015/07/%e5%8e%9f%e5%88%9b%e6%8e%a8%e8%8d%90%e4%b8%80%e4%b9%a6%e3%80%8a%e5%8f%a4%e4%bb%8a%e6%95%b0%e5%ad%a6%e6%80%9d%e6%83%b3%e3%80%8b/" title="查看《推荐一书《古今数学思想》》">推荐一书《古今数学思想》</a></li>
+
+  <li><a href="/2015/06/%e7%95%99%e8%a8%80%e6%9d%bf/" title="查看《留言板》">留言板</a></li>
+
+  <li><a href="/2015/06/%e9%ab%98%e6%95%88%e5%b7%a5%e4%bd%9c%e7%a7%98%e8%af%80%ef%bc%88%e6%9d%a5%e8%87%aa%e4%b8%80%e7%af%87%e8%8b%b1%e6%96%87%e6%96%87%e7%ab%a0%ef%bc%89/" title="查看《高效工作秘诀（来自一篇英文文章）》">高效工作秘诀（来自一篇英文文章）</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
+<span title="分类总数">3</span>
+<ul>
+
+  <li><a href="/categories.html#未分类-ref">未分类 (23)</a></li>
+
+  <li><a href="/categories.html#Mail-ref">Mail (3)</a></li>
+
+  <li><a href="/categories.html#Coding-ref">Coding (1)</a></li>
+
+</ul>
+
+        </section>
+        <section>
+          <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
+<span title="标签总数">53</span>
+<div id="tag-cloud">
+
+
+
+  
+  <a href="/tags.html#受限-ref" style="font-size: 9pt; color: #999;">受限</a>
+
+  
+  <a href="/tags.html#批处理-ref" style="font-size: 9pt; color: #999;">批处理</a>
+
+  
+  <a href="/tags.html#无线网-ref" style="font-size: 9pt; color: #999;">无线网</a>
+
+  
+  <a href="/tags.html#centos-ref" style="font-size: 9pt; color: #999;">centos</a>
+
+  
+  <a href="/tags.html#debian-ref" style="font-size: 9pt; color: #999;">debian</a>
+
+  
+  <a href="/tags.html#linux-ref" style="font-size: 15pt; color: #333;">linux</a>
+
+  
+  <a href="/tags.html#shadowsocks-ref" style="font-size: 18pt; color: #000;">shadowsocks</a>
+
+  
+  <a href="/tags.html#一键-ref" style="font-size: 9pt; color: #999;">一键</a>
+
+  
+  <a href="/tags.html#脚本-ref" style="font-size: 9pt; color: #999;">脚本</a>
+
+  
+  <a href="/tags.html#GUI-ref" style="font-size: 9pt; color: #999;">GUI</a>
+
+  
+  <a href="/tags.html#matlab-ref" style="font-size: 9pt; color: #999;">matlab</a>
+
+  
+  <a href="/tags.html#popup-ref" style="font-size: 9pt; color: #999;">popup</a>
+
+  
+  <a href="/tags.html#关闭-ref" style="font-size: 9pt; color: #999;">关闭</a>
+
+  
+  <a href="/tags.html#日本-ref" style="font-size: 9pt; color: #999;">日本</a>
+
+  
+  <a href="/tags.html#百度-ref" style="font-size: 9pt; color: #999;">百度</a>
+
+  
+  <a href="/tags.html#流量-ref" style="font-size: 9pt; color: #999;">流量</a>
+
+  
+  <a href="/tags.html#资费-ref" style="font-size: 9pt; color: #999;">资费</a>
+
+  
+  <a href="/tags.html#运营商-ref" style="font-size: 9pt; color: #999;">运营商</a>
+
+  
+  <a href="/tags.html#降价-ref" style="font-size: 9pt; color: #999;">降价</a>
+
+  
+  <a href="/tags.html#直角-ref" style="font-size: 9pt; color: #999;">直角</a>
+
+  
+  <a href="/tags.html#钝角-ref" style="font-size: 9pt; color: #999;">钝角</a>
+
+  
+  <a href="/tags.html#上火-ref" style="font-size: 9pt; color: #999;">上火</a>
+
+  
+  <a href="/tags.html#google-ref" style="font-size: 12pt; color: #666;">google</a>
+
+  
+  <a href="/tags.html#打不开-ref" style="font-size: 9pt; color: #999;">打不开</a>
+
+  
+  <a href="/tags.html#谷歌-ref" style="font-size: 9pt; color: #999;">谷歌</a>
+
+  
+  <a href="/tags.html#习惯-ref" style="font-size: 9pt; color: #999;">习惯</a>
+
+  
+  <a href="/tags.html#人生-ref" style="font-size: 9pt; color: #999;">人生</a>
+
+  
+  <a href="/tags.html#性格-ref" style="font-size: 9pt; color: #999;">性格</a>
+
+  
+  <a href="/tags.html#改善-ref" style="font-size: 9pt; color: #999;">改善</a>
+
+  
+  <a href="/tags.html#交往-ref" style="font-size: 9pt; color: #999;">交往</a>
+
+  
+  <a href="/tags.html#男女-ref" style="font-size: 9pt; color: #999;">男女</a>
+
+  
+  <a href="/tags.html#迟到-ref" style="font-size: 9pt; color: #999;">迟到</a>
+
+  
+  <a href="/tags.html#VPS-ref" style="font-size: 9pt; color: #999;">VPS</a>
+
+  
+  <a href="/tags.html#搬瓦工-ref" style="font-size: 9pt; color: #999;">搬瓦工</a>
+
+  
+  <a href="/tags.html#chrome-ref" style="font-size: 9pt; color: #999;">chrome</a>
+
+  
+  <a href="/tags.html#科学上网-ref" style="font-size: 15pt; color: #333;">科学上网</a>
+
+  
+  <a href="/tags.html#翻墙-ref" style="font-size: 9pt; color: #999;">翻墙</a>
+
+  
+  <a href="/tags.html#压缩-ref" style="font-size: 9pt; color: #999;">压缩</a>
+
+  
+  <a href="/tags.html#解压-ref" style="font-size: 9pt; color: #999;">解压</a>
+
+  
+  <a href="/tags.html#flash-ref" style="font-size: 9pt; color: #999;">flash</a>
+
+  
+  <a href="/tags.html#ubuntu-ref" style="font-size: 9pt; color: #999;">ubuntu</a>
+
+  
+  <a href="/tags.html#bt-ref" style="font-size: 9pt; color: #999;">bt</a>
+
+  
+  <a href="/tags.html#搜索-ref" style="font-size: 9pt; color: #999;">搜索</a>
+
+  
+  <a href="/tags.html#种子-ref" style="font-size: 9pt; color: #999;">种子</a>
+
+  
+  <a href="/tags.html#高效-ref" style="font-size: 9pt; color: #999;">高效</a>
+
+  
+  <a href="/tags.html#Lantern-ref" style="font-size: 9pt; color: #999;">Lantern</a>
+
+  
+  <a href="/tags.html#PPTP-ref" style="font-size: 9pt; color: #999;">PPTP</a>
+
+  
+  <a href="/tags.html#VPN-ref" style="font-size: 9pt; color: #999;">VPN</a>
+
+  
+  <a href="/tags.html#搭建-ref" style="font-size: 9pt; color: #999;">搭建</a>
+
+  
+  <a href="/tags.html#快搜-ref" style="font-size: 9pt; color: #999;">快搜</a>
+
+  
+  <a href="/tags.html#搜索引擎-ref" style="font-size: 9pt; color: #999;">搜索引擎</a>
+
+  
+  <a href="/tags.html#BitTorrent Sync-ref" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
+
+  
+  <a href="/tags.html#文件同步-ref" style="font-size: 9pt; color: #999;">文件同步</a>
+
+
+</div>
+
+        </section>
+        <div id="fixed-container">
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-code"></i> 代码仓库</a>
+<ul>
+  <li><a href="http://github.com/liberize/liberize.github.com" target="_blank">本博客源码</a></li>
+  <li><a href="http://github.com/liberize/alfred-dict-workflow" target="_blank">Alfred 查词 workflow</a></li>
+  <li><a href="http://github.com/liberize/rhythmbox-doubanfm-plugin" target="_blank">Rhythmbox 豆瓣 FM 插件</a></li>
+  <li><a href="http://github.com/liberize/rhythmbox-osdlyrics-plugin" target="_blank">Rhythmbox 歌词插件</a></li>
+  <li><a href="http://github.com/liberize/sublime-text-plugins" target="_blank">Sublime Text 的一些小插件</a></li>
+  <li><a href="http://github.com/liberize/flame-detection-system" target="_blank">基于视频的火焰检测系统</a></li>
+</ul>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
+<div id="contacts-list">
+  <a href="mailto:liberize@gmail.com" target="_blank" title="Gmail">
+    <i class="icon-large icon-fixed-width icon-envelope"></i>
+  </a>
+  <a href="https://github.com/liberize" target="_blank" title="Github">
+    <i class="icon-large icon-fixed-width icon-github"></i>
+  </a>
+  <a href="http://weibo.com/liberize" target="_blank" title="新浪微博">
+    <i class="icon-large icon-fixed-width icon-weibo"></i>
+  </a>
+  <a href="https://plus.google.com/118314345733357791088/" target="_blank" title="Google+">
+    <i class="icon-large icon-fixed-width icon-google-plus"></i>
+  </a>
+  <a href="https://twitter.com/liberize" target="_blank" title="Twitter">
+    <i class="icon-large icon-fixed-width icon-twitter"></i>
+  </a>
+</div>
+
+  </section>
+  <section>
+    <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+</ul>
+
+  </section>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var position = $('#fixed-container').offset();
+  $(window).scroll(function() {
+    if($(window).scrollTop() > position.top) {
+      $('#fixed-container').css('position','fixed').css('top','0');
+    } else {
+      $('#fixed-container').css('position','static');
+    }
+  });
+  if(matchMedia) {
+    var mq = matchMedia('(max-width: 999px)');
+    mq.addListener(function(mql) {
+      if (!mql.matches) {
+        position = $('#fixed-container').offset();
+      }
+    });
+  }
+});
+</script>
+
+      </aside>
+
+      <!-- Main Content -->
+      <div id="main-inner">
+        <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
+        <div id="main-content">
+          
+
+
+<!-- Recent Posts  -->
+<section>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/" title="查看《种子搜索网站汇总》">种子搜索网站汇总</a></h2>
+    </header>
+
+    <section>
+      <p>
+        现在磁力种子搜索引擎质量参差不齐，现在就重点整理几个常用的种子搜索站，做个对比分析
+1.屌丝搜-最懂屌丝的BT搜索引擎（www.diaosisou.com）
+号称最懂屌丝的BT搜索引擎，确实名副其实，屌丝搜索功能强大。其种子资源强大丰富而又有简介的界面风格，无广告弹窗，支持在线云点播，总体来说，屌丝搜确实是良心站点。该磁力站在短时间内获得了极高的人气，在国内有着良好的口碑，被称为种子搜索神器网页版和万能种子搜索器。除了能搜索种子电影资源外，该站点也整合了网盘搜索功能，是一个很大的亮点。推荐指数5颗星。访问请戳点击打开链接
+2.手撕包菜（http://www.cilibaba.com/）
+...
+      </p>
+      <a class="button-link" href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">12 June 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="种子搜索网站汇总" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/06/ubuntu-firefox/" title="查看《ubuntu firefox flash 插件安装方法》">ubuntu firefox flash 插件安装方法</a></h2>
+    </header>
+
+    <section>
+      <p>
+        刚刚安装好ubuntu，就发现意见非常不爽的事情，默认自带的浏览器firefox默认不支持flash，这可如何是好？好在安装插件也不麻烦，且听我慢慢道来：
+
+flash并不是一个开源软件，这也是ubuntu没有默认就带好flash的原因，我们需要去adobe的公司网站下载ubuntu
+
+网址：https://get.adobe.com/flashplayer/
+
+有4个选项可以选择，分别是
+
+
+yum（centOS系的）
+tar.gz（这个就是我们要选的）！！！！！！！！！！！！！！！！！
+rpm（也是一种软件包管理器）
+for ubuntu （这个已经失效，不要下载这个！！！）
+
+
+&...
+      </p>
+      <a class="button-link" href="/2015/06/ubuntu-firefox/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/06/ubuntu-firefox/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="ubuntu firefox flash 插件安装方法" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" title="查看《linux 解压、打包命令大全》">linux 解压、打包命令大全</a></h2>
+    </header>
+
+    <section>
+      <p>
+        .tar
+解包：tar xvf FileName.tar
+打包：tar cvf FileName.tar DirName
+（注：tar是打包，不是压缩！）
+———————————————
+.gz
+解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+压缩：gzip FileName
+
+.tar.gz 和 .tgz
+解压：tar zxvf FileName.tar.gz
+压缩：tar zcvf FileName.tar.gz DirName
+———————————————
+.bz2
+解压1：bzip2 -d FileName.bz2
+解压2：bunz...
+      </p>
+      <a class="button-link" href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="linux 解压、打包命令大全" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/" title="查看《chrome shadowsocks 配合 GFWlist无缝科学上网》">chrome shadowsocks 配合 GFWlist无缝科学上网</a></h2>
+    </header>
+
+    <section>
+      <p>
+        科学上网的各位是否发现一件挺恼人的事情，就是所上的网站并非都是那些被墙的网站，很多时候需要上一些baidu啦weibo啦等国内网站，如果一直用翻墙工具，反而会很慢，两者切换很麻烦，本文介绍一种方法帮你解除烦恼。
+
+shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成熟的教程了，大体上分两步：1、部署服务器端的shadowsocks server，2、部署你自己电脑上的shadowsocks client，如果有不甚了解的各位可以参考shadowsocks 的github网站： https://github.com/shadowsocks/shadowsocks
+
+此外，还...
+      </p>
+      <a class="button-link" href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="chrome shadowsocks 配合 GFWlist无缝科学上网" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" title="查看《简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS》">简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS</a></h2>
+    </header>
+
+    <section>
+      <p>
+        很多人可能折腾免费VPN或者免费SSH又或者免费Shadowsocks，最后折腾得精疲力尽，也没有找到靠谱的梯子工具。实际上，有一种较为划算的方法，那就是自己用VPS搭建shadowsocks。
+
+开始折腾VPS也已经有一段时间了，对这个行业以及几家较大较有名的VPS也有了一些了解，在此希望与您一起交流。如果您的预算并不高，仅仅是用VPS搭建个梯子进行科学上网，那么搬瓦工VPS绝对是不二之选。
+
+首先需要去搬瓦工官方网站去注册一个账户：https://bandwagonhost.com/
+
+点击Register
+
+
+
+&nbsp;
+
+&nbsp;
+
+然后填写相关的信息
+
+
+
+&nbsp;...
+      </p>
+      <a class="button-link" href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/05/nannvjiaowangzuijihuishenme/" title="查看《男女交往最忌讳什么？》">男女交往最忌讳什么？</a></h2>
+    </header>
+
+    <section>
+      <p>
+        转自知乎http://www.zhihu.com/question/23151702/answer/47055476
+
+那一年的夏天，我在广州地铁里等一个人。
+我已经不知道是第几次在等了，有时候我等待她的出现，会是几分钟，有时候会是几十分钟，而这一次，我等了半小时，她还是迟迟没有出现。
+年轻的时候，我是一个性格极强的人。作为一个写作者，没有性格，也吃不了这碗饭。
+我甚至跟我朋友说过：“今后我要找女友，让我等半个小时以上，我立马就分掉——我讨厌不守时的人，就好像别人的时间就不是时间一样。”
+
+随着年纪的增大，我的性格也开始日趋平缓，我开始学会去容忍别人错误和任性。况且这天下午，我也没什么重...
+      </p>
+      <a class="button-link" href="/2015/05/nannvjiaowangzuijihuishenme/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">09 May 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/05/nannvjiaowangzuijihuishenme/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="男女交往最忌讳什么？" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/05/gaibianxinggehuorenshengdexiguan/" title="查看《改变性格或人生的习惯！》">改变性格或人生的习惯！</a></h2>
+    </header>
+
+    <section>
+      <p>
+        对这方面有些研究，分享一些改变性格和人生的习惯，会慢慢更新一段时间，这会是一个很长的文章，请大家有些耐心。
+
+我花了好几年时间在研究习惯，同时在微信(read01)上发起100天行动，通过100天来培养一个好习惯，到现在（20141207）为止进行了1年半左右，有数万人参与，在各种不同途径收到几千人的反馈和总结，从大家的反馈过程中发现了很多有意思的现象，同时现在也在做一些习惯养成方面的培训，对这个问题有很多心得可以跟大家分享。
+
+先从只要你坚持就一定能改变你的性格或者生活的习惯来说：
+
+1、记录自己的时间花销
+
+这个习惯能让你明白一件事情，你的时间哪去了？
+
+培养这个习惯花了好几年时间，...
+      </p>
+      <a class="button-link" href="/2015/05/gaibianxinggehuorenshengdexiguan/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">07 May 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/05/gaibianxinggehuorenshengdexiguan/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="改变性格或人生的习惯！" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/05/gugebunengyongjiuyongta/" title="查看《谷歌不能用，就用它！！！》">谷歌不能用，就用它！！！</a></h2>
+    </header>
+
+    <section>
+      <p>
+        一大波网站来袭，请大家做好收藏准备，要是不能打开 **
+请随时搜索“Google镜像” 
+
+Glgoo 搜索谷歌搜索引擎
+Btbook &#8211; 网页搜索
+谷歌搜索引擎香港www.google.com.hk打不开就用谷粉搜搜
+Google搜索镜像 无须设置，稳定快速使用谷歌搜索引擎，直连Google.com
+天外天搜索 &#8211; 基于Google的搜索引擎
+一哥搜（Egeso.com） 香港www.google.com.hk 谷歌打不开 就用一哥搜（Egeso.com）
+谷歌打不开怎么办？
+Googke.me 且用且珍惜~ (基于Google的实时搜索服务)
+南搜 nan.s...
+      </p>
+      <a class="button-link" href="/2015/05/gugebunengyongjiuyongta/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">06 May 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/05/gugebunengyongjiuyongta/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="谷歌不能用，就用它！！！" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/04/pashanghuochishenme/" title="查看《怕上火吃什么？》">怕上火吃什么？</a></h2>
+    </header>
+
+    <section>
+      <p>
+        转自果壳网，网址：http://www.guokr.com/blog/478354/
+
+怕上火吃什么？
+这13种症状你遇到过吗？
+
+本文作者 ：@营养师顾中一 （北京友谊医院营养师 北京营养师协会理事 ）
+微信号： yy4gz1
+（关注微信后回复关键词可收到上百话题的独家解读 本文关键词#上火#）
+
+怕上火吃什么？这13种症状你遇到过吗？
+友情提示：全文2600字，建议先转发再阅读
+昨天我在微博上发了张午餐照，其中有碗枸杞水，有人就问：“枸杞吃多了不会上火吗？”我便发了一篇文章详细讲解了#枸杞#的营养特点，比如枸杞中有一些类似阿托品的兴奋性物质，含糖较多也可能引起不适…… 最后告诉她：“...
+      </p>
+      <a class="button-link" href="/2015/04/pashanghuochishenme/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">27 April 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/04/pashanghuochishenme/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="怕上火吃什么？" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+  <article class="nested">
+
+    <header>
+      <h2><a href="/2015/04/dunjiaodengyuzhijiao/" title="查看《钝角等于直角？！》">钝角等于直角？！</a></h2>
+    </header>
+
+    <section>
+      <p>
+        下面贴出古希腊数学家给出的证明（转自果壳）如下图，ABCD为矩形，在矩形外选取一点E，使得DC=DE。G、F分别为BC、BE中点，然后过G、F分别作垂线，两条垂线相交于H。连接H与ABDE四点，就形成了下图，为了让证明过程更清晰，已经把一些相等的线段染成了同一种颜色。
+
+
+
+因H在AD的垂直平分线上，故AH=DH。因H在BE的垂直平分上，故BH=EH。因DC=DE且ABCD为矩形，故AB=DE。至此，ΔABH和ΔDEH的三边都相等，根据“边边边”（初中平面几何里学的全等三角形判定条件之一），ΔABH与ΔDEH全等。因此∠BAH=∠EDH。上式两边分别减去∠HAD和∠HDA（因等腰三角形，...
+      </p>
+      <a class="button-link" href="/2015/04/dunjiaodengyuzhijiao/" title="查看全文">read more</a>
+    </section>
+
+    <footer>
+      <p>
+        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">27 April 2015</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
+        评论：<a href="/2015/04/dunjiaodengyuzhijiao/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="钝角等于直角？！" data-count-type="comments"></span></a>
+      </p>
+    </footer>
+
+  </article>
+  
+
+  
+    
+    
+<script type="text/javascript">
+var duoshuoQuery = {short_name: 'ximenggong'};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+  
+
+</section>
+
+<!-- Pagination Links -->
+<section class="pagination pagination-centered">
+  <ul>
+    <!-- First Page -->
+    
+    <li><a href="/index.html">&laquo;&laquo;</a></li>
+    
+
+    <!-- Previous Page -->
+    
+    <li>
+      
+      <a href="/index.html">&laquo;</a>
+      
+    </li>
+    
+
+    <!-- Current Page -->
+    <li class="active">
+      <span class="page_number ">第 2/3 页</span>
+    </li>
+
+    <!-- Next Page -->
+    
+    <li><a href="/page3">&raquo;</a></li>
+    
+
+    <!-- Last Page -->
+    
+    <li><a href="/page3">&raquo;&raquo;</a></li>
+    
+  </ul>
+</section>
+
+        </div>
+      </div>
+
+      <div id="back-top">
+  <a href="#top" title="回到顶部"></a>
+</div>
+<script type="text/javascript">
+$("#back-top").hide();
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#back-top').fadeIn();
+    } else {
+      $('#back-top').fadeOut();
+    }
+  });
+  $('#back-top a').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+  });
+});
+</script>
+
+
+    </section>
+
+    <footer id="bottom">
+      <p align="center">&copy; 2015 西蒙宫
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+      </p>
+    </footer>
+  </div>
+
+  <script type="text/javascript">$('article.post a').attr('target', '_blank');</script>
+  
+
+  
+</body>
+</html>
+
