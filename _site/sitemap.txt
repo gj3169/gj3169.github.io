@@ -3,6 +3,7 @@ http://simongong.net/404/
 http://simongong.net/about/
 http://simongong.net/archive/
 http://simongong.net/atom.xml
+http://simongong.net/book/
 http://simongong.net/categories/
 http://simongong.net/
 http://simongong.net/messages/

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
@@ -9,10 +8,9 @@
   <meta charset="UTF-8">
   <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
 
+  <title>wentao's blog</title>
   
-  <title>liberize's blog - 西蒙宫的博客</title>
-  
-  <meta name="description" content="一个码农的技术博客，分享折腾的点点滴滴">
+  <meta name="description" content="编程爱好者，兴趣广泛">
   <meta name="author" content="西蒙宫">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +22,7 @@
   <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.min.css">
   <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css">
 
   <!-- Scripts -->
@@ -43,23 +41,27 @@
       <!-- Navigation Bar -->
       <nav id="navbar">
         <ul>
+          
           <li>
-            <a href="/" title="首页">首页</a>
-          </li>
-          <li>
-            <a href="/categories.html" title="分类">分类</a>
+            <a href="/" rel="nofollow" title="首页">首页</a>
           </li>
           <li>
-            <a href="/tags.html" title="标签">标签</a>
+            <a href="/categories.html" rel="nofollow" title="分类">分类</a>
           </li>
           <li>
-            <a href="/messages.html" title="留言板">留言板</a>
+            <a href="/tags.html" rel="nofollow" title="标签">标签</a>
           </li>
-          <li id="about-link" >
-            <a href="/about.html" title="关于我">关于我</a>
+          <li>
+            <a href="/messages.html" rel="nofollow" title="留言板">留言板</a>
           </li>
-          <li id="rss-link">
-            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          <li>
+            <a href="" rel="nofollow" title="我的书单">我的书单</a>
+          </li>
+          <li>
+            <a href="/about.html" rel="nofollow" title="关于我">关于我</a>
+          </li>
+          <li>
+            <a href="/rss.xml" rel="nofollow" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
           </li>
         </ul>
       </nav>
@@ -124,7 +126,7 @@ $(document).ready(function() {
   function findEntries(q) {
     var matches = [];
     var rq = new RegExp(q, 'im');
-    var rl = /\/([^\/]+)\.html$/;
+    var rl = /^http:\/\/wentaotang\.github\.io\/post\/(.+)\.html$/;
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       var title = $(entry.getElementsByTagName('title')[0]).text();
@@ -169,7 +171,6 @@ $(document).ready(function() {
 
 });
 </script>
-
         </section>
         <section>
           <a href="/archive.html" title="查看所有文章"><i class="icon-fixed-width icon-file-text"></i> 最近发表</a>
@@ -197,21 +198,19 @@ $(document).ready(function() {
   <li><a href="/2015/06/%e9%ab%98%e6%95%88%e5%b7%a5%e4%bd%9c%e7%a7%98%e8%af%80%ef%bc%88%e6%9d%a5%e8%87%aa%e4%b8%80%e7%af%87%e8%8b%b1%e6%96%87%e6%96%87%e7%ab%a0%ef%bc%89/" title="查看《高效工作秘诀（来自一篇英文文章）》">高效工作秘诀（来自一篇英文文章）</a></li>
 
 </ul>
-
         </section>
         <section>
           <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
 <span title="分类总数">3</span>
 <ul>
 
-  <li><a href="/categories.html#未分类-ref">未分类 (23)</a></li>
+  <li><a href="/categories.html#未分类-ref" rel="nofollow">未分类 (23)</a></li>
 
-  <li><a href="/categories.html#Mail-ref">Mail (3)</a></li>
+  <li><a href="/categories.html#Mail-ref" rel="nofollow">Mail (3)</a></li>
 
-  <li><a href="/categories.html#Coding-ref">Coding (1)</a></li>
+  <li><a href="/categories.html#Coding-ref" rel="nofollow">Coding (1)</a></li>
 
 </ul>
-
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
@@ -219,212 +218,200 @@ $(document).ready(function() {
 <div id="tag-cloud">
 
 
+  
+  <a href="/tags.html#受限-ref" rel="nofollow" style="font-size: 9pt; color: #999;">受限</a>
 
   
-  <a href="/tags.html#受限-ref" style="font-size: 9pt; color: #999;">受限</a>
+  <a href="/tags.html#批处理-ref" rel="nofollow" style="font-size: 9pt; color: #999;">批处理</a>
 
   
-  <a href="/tags.html#批处理-ref" style="font-size: 9pt; color: #999;">批处理</a>
+  <a href="/tags.html#无线网-ref" rel="nofollow" style="font-size: 9pt; color: #999;">无线网</a>
 
   
-  <a href="/tags.html#无线网-ref" style="font-size: 9pt; color: #999;">无线网</a>
+  <a href="/tags.html#centos-ref" rel="nofollow" style="font-size: 9pt; color: #999;">centos</a>
 
   
-  <a href="/tags.html#centos-ref" style="font-size: 9pt; color: #999;">centos</a>
+  <a href="/tags.html#debian-ref" rel="nofollow" style="font-size: 9pt; color: #999;">debian</a>
 
   
-  <a href="/tags.html#debian-ref" style="font-size: 9pt; color: #999;">debian</a>
+  <a href="/tags.html#linux-ref" rel="nofollow" style="font-size: 15pt; color: #333;">linux</a>
 
   
-  <a href="/tags.html#linux-ref" style="font-size: 15pt; color: #333;">linux</a>
+  <a href="/tags.html#shadowsocks-ref" rel="nofollow" style="font-size: 18pt; color: #000;">shadowsocks</a>
 
   
-  <a href="/tags.html#shadowsocks-ref" style="font-size: 18pt; color: #000;">shadowsocks</a>
+  <a href="/tags.html#一键-ref" rel="nofollow" style="font-size: 9pt; color: #999;">一键</a>
 
   
-  <a href="/tags.html#一键-ref" style="font-size: 9pt; color: #999;">一键</a>
+  <a href="/tags.html#脚本-ref" rel="nofollow" style="font-size: 9pt; color: #999;">脚本</a>
 
   
-  <a href="/tags.html#脚本-ref" style="font-size: 9pt; color: #999;">脚本</a>
+  <a href="/tags.html#GUI-ref" rel="nofollow" style="font-size: 9pt; color: #999;">GUI</a>
 
   
-  <a href="/tags.html#GUI-ref" style="font-size: 9pt; color: #999;">GUI</a>
+  <a href="/tags.html#matlab-ref" rel="nofollow" style="font-size: 9pt; color: #999;">matlab</a>
 
   
-  <a href="/tags.html#matlab-ref" style="font-size: 9pt; color: #999;">matlab</a>
+  <a href="/tags.html#popup-ref" rel="nofollow" style="font-size: 9pt; color: #999;">popup</a>
 
   
-  <a href="/tags.html#popup-ref" style="font-size: 9pt; color: #999;">popup</a>
+  <a href="/tags.html#关闭-ref" rel="nofollow" style="font-size: 9pt; color: #999;">关闭</a>
 
   
-  <a href="/tags.html#关闭-ref" style="font-size: 9pt; color: #999;">关闭</a>
+  <a href="/tags.html#日本-ref" rel="nofollow" style="font-size: 9pt; color: #999;">日本</a>
 
   
-  <a href="/tags.html#日本-ref" style="font-size: 9pt; color: #999;">日本</a>
+  <a href="/tags.html#百度-ref" rel="nofollow" style="font-size: 9pt; color: #999;">百度</a>
 
   
-  <a href="/tags.html#百度-ref" style="font-size: 9pt; color: #999;">百度</a>
+  <a href="/tags.html#流量-ref" rel="nofollow" style="font-size: 9pt; color: #999;">流量</a>
 
   
-  <a href="/tags.html#流量-ref" style="font-size: 9pt; color: #999;">流量</a>
+  <a href="/tags.html#资费-ref" rel="nofollow" style="font-size: 9pt; color: #999;">资费</a>
 
   
-  <a href="/tags.html#资费-ref" style="font-size: 9pt; color: #999;">资费</a>
+  <a href="/tags.html#运营商-ref" rel="nofollow" style="font-size: 9pt; color: #999;">运营商</a>
 
   
-  <a href="/tags.html#运营商-ref" style="font-size: 9pt; color: #999;">运营商</a>
+  <a href="/tags.html#降价-ref" rel="nofollow" style="font-size: 9pt; color: #999;">降价</a>
 
   
-  <a href="/tags.html#降价-ref" style="font-size: 9pt; color: #999;">降价</a>
+  <a href="/tags.html#直角-ref" rel="nofollow" style="font-size: 9pt; color: #999;">直角</a>
 
   
-  <a href="/tags.html#直角-ref" style="font-size: 9pt; color: #999;">直角</a>
+  <a href="/tags.html#钝角-ref" rel="nofollow" style="font-size: 9pt; color: #999;">钝角</a>
 
   
-  <a href="/tags.html#钝角-ref" style="font-size: 9pt; color: #999;">钝角</a>
+  <a href="/tags.html#上火-ref" rel="nofollow" style="font-size: 9pt; color: #999;">上火</a>
 
   
-  <a href="/tags.html#上火-ref" style="font-size: 9pt; color: #999;">上火</a>
+  <a href="/tags.html#google-ref" rel="nofollow" style="font-size: 12pt; color: #666;">google</a>
 
   
-  <a href="/tags.html#google-ref" style="font-size: 12pt; color: #666;">google</a>
+  <a href="/tags.html#打不开-ref" rel="nofollow" style="font-size: 9pt; color: #999;">打不开</a>
 
   
-  <a href="/tags.html#打不开-ref" style="font-size: 9pt; color: #999;">打不开</a>
+  <a href="/tags.html#谷歌-ref" rel="nofollow" style="font-size: 9pt; color: #999;">谷歌</a>
 
   
-  <a href="/tags.html#谷歌-ref" style="font-size: 9pt; color: #999;">谷歌</a>
+  <a href="/tags.html#习惯-ref" rel="nofollow" style="font-size: 9pt; color: #999;">习惯</a>
 
   
-  <a href="/tags.html#习惯-ref" style="font-size: 9pt; color: #999;">习惯</a>
+  <a href="/tags.html#人生-ref" rel="nofollow" style="font-size: 9pt; color: #999;">人生</a>
 
   
-  <a href="/tags.html#人生-ref" style="font-size: 9pt; color: #999;">人生</a>
+  <a href="/tags.html#性格-ref" rel="nofollow" style="font-size: 9pt; color: #999;">性格</a>
 
   
-  <a href="/tags.html#性格-ref" style="font-size: 9pt; color: #999;">性格</a>
+  <a href="/tags.html#改善-ref" rel="nofollow" style="font-size: 9pt; color: #999;">改善</a>
 
   
-  <a href="/tags.html#改善-ref" style="font-size: 9pt; color: #999;">改善</a>
+  <a href="/tags.html#交往-ref" rel="nofollow" style="font-size: 9pt; color: #999;">交往</a>
 
   
-  <a href="/tags.html#交往-ref" style="font-size: 9pt; color: #999;">交往</a>
+  <a href="/tags.html#男女-ref" rel="nofollow" style="font-size: 9pt; color: #999;">男女</a>
 
   
-  <a href="/tags.html#男女-ref" style="font-size: 9pt; color: #999;">男女</a>
+  <a href="/tags.html#迟到-ref" rel="nofollow" style="font-size: 9pt; color: #999;">迟到</a>
 
   
-  <a href="/tags.html#迟到-ref" style="font-size: 9pt; color: #999;">迟到</a>
+  <a href="/tags.html#VPS-ref" rel="nofollow" style="font-size: 9pt; color: #999;">VPS</a>
 
   
-  <a href="/tags.html#VPS-ref" style="font-size: 9pt; color: #999;">VPS</a>
+  <a href="/tags.html#搬瓦工-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搬瓦工</a>
 
   
-  <a href="/tags.html#搬瓦工-ref" style="font-size: 9pt; color: #999;">搬瓦工</a>
+  <a href="/tags.html#chrome-ref" rel="nofollow" style="font-size: 9pt; color: #999;">chrome</a>
 
   
-  <a href="/tags.html#chrome-ref" style="font-size: 9pt; color: #999;">chrome</a>
+  <a href="/tags.html#科学上网-ref" rel="nofollow" style="font-size: 15pt; color: #333;">科学上网</a>
 
   
-  <a href="/tags.html#科学上网-ref" style="font-size: 15pt; color: #333;">科学上网</a>
+  <a href="/tags.html#翻墙-ref" rel="nofollow" style="font-size: 9pt; color: #999;">翻墙</a>
 
   
-  <a href="/tags.html#翻墙-ref" style="font-size: 9pt; color: #999;">翻墙</a>
+  <a href="/tags.html#压缩-ref" rel="nofollow" style="font-size: 9pt; color: #999;">压缩</a>
 
   
-  <a href="/tags.html#压缩-ref" style="font-size: 9pt; color: #999;">压缩</a>
+  <a href="/tags.html#解压-ref" rel="nofollow" style="font-size: 9pt; color: #999;">解压</a>
 
   
-  <a href="/tags.html#解压-ref" style="font-size: 9pt; color: #999;">解压</a>
+  <a href="/tags.html#flash-ref" rel="nofollow" style="font-size: 9pt; color: #999;">flash</a>
 
   
-  <a href="/tags.html#flash-ref" style="font-size: 9pt; color: #999;">flash</a>
+  <a href="/tags.html#ubuntu-ref" rel="nofollow" style="font-size: 9pt; color: #999;">ubuntu</a>
 
   
-  <a href="/tags.html#ubuntu-ref" style="font-size: 9pt; color: #999;">ubuntu</a>
+  <a href="/tags.html#bt-ref" rel="nofollow" style="font-size: 9pt; color: #999;">bt</a>
 
   
-  <a href="/tags.html#bt-ref" style="font-size: 9pt; color: #999;">bt</a>
+  <a href="/tags.html#搜索-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搜索</a>
 
   
-  <a href="/tags.html#搜索-ref" style="font-size: 9pt; color: #999;">搜索</a>
+  <a href="/tags.html#种子-ref" rel="nofollow" style="font-size: 9pt; color: #999;">种子</a>
 
   
-  <a href="/tags.html#种子-ref" style="font-size: 9pt; color: #999;">种子</a>
+  <a href="/tags.html#高效-ref" rel="nofollow" style="font-size: 9pt; color: #999;">高效</a>
 
   
-  <a href="/tags.html#高效-ref" style="font-size: 9pt; color: #999;">高效</a>
+  <a href="/tags.html#Lantern-ref" rel="nofollow" style="font-size: 9pt; color: #999;">Lantern</a>
 
   
-  <a href="/tags.html#Lantern-ref" style="font-size: 9pt; color: #999;">Lantern</a>
+  <a href="/tags.html#PPTP-ref" rel="nofollow" style="font-size: 9pt; color: #999;">PPTP</a>
 
   
-  <a href="/tags.html#PPTP-ref" style="font-size: 9pt; color: #999;">PPTP</a>
+  <a href="/tags.html#VPN-ref" rel="nofollow" style="font-size: 9pt; color: #999;">VPN</a>
 
   
-  <a href="/tags.html#VPN-ref" style="font-size: 9pt; color: #999;">VPN</a>
+  <a href="/tags.html#搭建-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搭建</a>
 
   
-  <a href="/tags.html#搭建-ref" style="font-size: 9pt; color: #999;">搭建</a>
+  <a href="/tags.html#快搜-ref" rel="nofollow" style="font-size: 9pt; color: #999;">快搜</a>
 
   
-  <a href="/tags.html#快搜-ref" style="font-size: 9pt; color: #999;">快搜</a>
+  <a href="/tags.html#搜索引擎-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搜索引擎</a>
 
   
-  <a href="/tags.html#搜索引擎-ref" style="font-size: 9pt; color: #999;">搜索引擎</a>
+  <a href="/tags.html#BitTorrent Sync-ref" rel="nofollow" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
 
   
-  <a href="/tags.html#BitTorrent Sync-ref" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
-
-  
-  <a href="/tags.html#文件同步-ref" style="font-size: 9pt; color: #999;">文件同步</a>
-
+  <a href="/tags.html#文件同步-ref" rel="nofollow" style="font-size: 9pt; color: #999;">文件同步</a>
 
 </div>
-
         </section>
-        <div id="fixed-container">
+         <div id="fixed-container">
   <section>
     <a href="#"><i class="icon-fixed-width icon-code"></i> 代码仓库</a>
 <ul>
-  <li><a href="http://github.com/liberize/liberize.github.com" target="_blank">本博客源码</a></li>
-  <li><a href="http://github.com/liberize/alfred-dict-workflow" target="_blank">Alfred 查词 workflow</a></li>
-  <li><a href="http://github.com/liberize/rhythmbox-doubanfm-plugin" target="_blank">Rhythmbox 豆瓣 FM 插件</a></li>
-  <li><a href="http://github.com/liberize/rhythmbox-osdlyrics-plugin" target="_blank">Rhythmbox 歌词插件</a></li>
-  <li><a href="http://github.com/liberize/sublime-text-plugins" target="_blank">Sublime Text 的一些小插件</a></li>
-  <li><a href="http://github.com/liberize/flame-detection-system" target="_blank">基于视频的火焰检测系统</a></li>
+  <li><a href="http://github.com/wentaotang/wentaotang.github.io">本博客源码</a></li>
 </ul>
-
   </section>
   <section>
     <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
 <div id="contacts-list">
-  <a href="mailto:liberize@gmail.com" target="_blank" title="Gmail">
+  <a href="mailto:wentao_tang@126.com" target="_blank" rel="nofollow" title="网易126">
     <i class="icon-large icon-fixed-width icon-envelope"></i>
   </a>
-  <a href="https://github.com/liberize" target="_blank" title="Github">
+  <a href="https://github.com/wentaotang" target="_blank" rel="nofollow" title="Github">
     <i class="icon-large icon-fixed-width icon-github"></i>
   </a>
-  <a href="http://weibo.com/liberize" target="_blank" title="新浪微博">
+  <a href="http://weibo.com/u/2012516323" target="_blank" rel="nofollow" title="新浪微博">
     <i class="icon-large icon-fixed-width icon-weibo"></i>
   </a>
-  <a href="https://plus.google.com/118314345733357791088/" target="_blank" title="Google+">
+  <a href="https://plus.google.com/111343652736896481587/" target="_blank" rel="nofollow" title="Google+">
     <i class="icon-large icon-fixed-width icon-google-plus"></i>
   </a>
-  <a href="https://twitter.com/liberize" target="_blank" title="Twitter">
-    <i class="icon-large icon-fixed-width icon-twitter"></i>
-  </a>
 </div>
-
   </section>
+  <!-- 
   <section>
     <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
 <ul>
-  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
-  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank" rel="nofollow">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank" rel="nofollow">Jekyll 静态博客生成器</a></li>
 </ul>
-
   </section>
+  -->
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -446,7 +433,6 @@ $(document).ready(function() {
   }
 });
 </script>
-
       </aside>
 
       <!-- Main Content -->
@@ -454,7 +440,6 @@ $(document).ready(function() {
         <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
         <div id="main-content">
           
-
 
 <!-- Recent Posts  -->
 <section>
@@ -473,15 +458,15 @@ $(document).ready(function() {
 2.手撕包菜（http://www.cilibaba.com/）
 ...
       </p>
-      <a class="button-link" href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">12 June 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="种子搜索网站汇总" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-06-12" rel="nofollow" title="查看此月所有文章">2015-06-12</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/06/%e7%a7%8d%e5%ad%90%e6%90%9c%e7%b4%a2%e7%bd%91%e7%ab%99%e6%b1%87%e6%80%bb/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="种子搜索网站汇总" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -512,15 +497,15 @@ for ubuntu （这个已经失效，不要下载这个！！！）
 
 &...
       </p>
-      <a class="button-link" href="/2015/06/ubuntu-firefox/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/06/ubuntu-firefox/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/06/ubuntu-firefox/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="ubuntu firefox flash 插件安装方法" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-06-11" rel="nofollow" title="查看此月所有文章">2015-06-11</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/06/ubuntu-firefox/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="ubuntu firefox flash 插件安装方法" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -552,15 +537,15 @@ for ubuntu （这个已经失效，不要下载这个！！！）
 解压1：bzip2 -d FileName.bz2
 解压2：bunz...
       </p>
-      <a class="button-link" href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="linux 解压、打包命令大全" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-06-11" rel="nofollow" title="查看此月所有文章">2015-06-11</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="linux 解压、打包命令大全" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -580,15 +565,15 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 此外，还...
       </p>
-      <a class="button-link" href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="chrome shadowsocks 配合 GFWlist无缝科学上网" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-06-11" rel="nofollow" title="查看此月所有文章">2015-06-11</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/06/chrome-shadowsocks-%e9%85%8d%e5%90%88-gfwlist%e6%97%a0%e7%bc%9d%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="chrome shadowsocks 配合 GFWlist无缝科学上网" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -622,15 +607,15 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 &nbsp;...
       </p>
-      <a class="button-link" href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#June-2015" title="查看此月所有文章">11 June 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-06-11" rel="nofollow" title="查看此月所有文章">2015-06-11</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -653,15 +638,15 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 随着年纪的增大，我的性格也开始日趋平缓，我开始学会去容忍别人错误和任性。况且这天下午，我也没什么重...
       </p>
-      <a class="button-link" href="/2015/05/nannvjiaowangzuijihuishenme/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/05/nannvjiaowangzuijihuishenme/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">09 May 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/05/nannvjiaowangzuijihuishenme/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="男女交往最忌讳什么？" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-05-09" rel="nofollow" title="查看此月所有文章">2015-05-09</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/05/nannvjiaowangzuijihuishenme/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="男女交往最忌讳什么？" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -687,15 +672,15 @@ shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成
 
 培养这个习惯花了好几年时间，...
       </p>
-      <a class="button-link" href="/2015/05/gaibianxinggehuorenshengdexiguan/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/05/gaibianxinggehuorenshengdexiguan/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">07 May 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/05/gaibianxinggehuorenshengdexiguan/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="改变性格或人生的习惯！" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-05-07" rel="nofollow" title="查看此月所有文章">2015-05-07</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/05/gaibianxinggehuorenshengdexiguan/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="改变性格或人生的习惯！" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -722,15 +707,15 @@ Google搜索镜像 无须设置，稳定快速使用谷歌搜索引擎，直连G
 Googke.me 且用且珍惜~ (基于Google的实时搜索服务)
 南搜 nan.s...
       </p>
-      <a class="button-link" href="/2015/05/gugebunengyongjiuyongta/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/05/gugebunengyongjiuyongta/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#May-2015" title="查看此月所有文章">06 May 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/05/gugebunengyongjiuyongta/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="谷歌不能用，就用它！！！" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-05-06" rel="nofollow" title="查看此月所有文章">2015-05-06</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/05/gugebunengyongjiuyongta/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="谷歌不能用，就用它！！！" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -757,15 +742,15 @@ Googke.me 且用且珍惜~ (基于Google的实时搜索服务)
 友情提示：全文2600字，建议先转发再阅读
 昨天我在微博上发了张午餐照，其中有碗枸杞水，有人就问：“枸杞吃多了不会上火吗？”我便发了一篇文章详细讲解了#枸杞#的营养特点，比如枸杞中有一些类似阿托品的兴奋性物质，含糖较多也可能引起不适…… 最后告诉她：“...
       </p>
-      <a class="button-link" href="/2015/04/pashanghuochishenme/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/pashanghuochishenme/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">27 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/pashanghuochishenme/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="怕上火吃什么？" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-27" rel="nofollow" title="查看此月所有文章">2015-04-27</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/pashanghuochishenme/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="怕上火吃什么？" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -785,15 +770,15 @@ Googke.me 且用且珍惜~ (基于Google的实时搜索服务)
 
 因H在AD的垂直平分线上，故AH=DH。因H在BE的垂直平分上，故BH=EH。因DC=DE且ABCD为矩形，故AB=DE。至此，ΔABH和ΔDEH的三边都相等，根据“边边边”（初中平面几何里学的全等三角形判定条件之一），ΔABH与ΔDEH全等。因此∠BAH=∠EDH。上式两边分别减去∠HAD和∠HDA（因等腰三角形，...
       </p>
-      <a class="button-link" href="/2015/04/dunjiaodengyuzhijiao/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/dunjiaodengyuzhijiao/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">27 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/dunjiaodengyuzhijiao/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="钝角等于直角？！" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-27" rel="nofollow" title="查看此月所有文章">2015-04-27</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#Mail-ref" rel="nofollow" title="查看此类别下的所有文章">Mail</a>，
+        评论：<a href="/2015/04/dunjiaodengyuzhijiao/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="钝角等于直角？！" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -877,20 +862,22 @@ $(document).ready(function () {
 });
 </script>
 
-
     </section>
 
     <footer id="bottom">
       <p align="center">&copy; 2015 西蒙宫
-        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" rel="nofollow" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank" rel="nofollow">Twitter Bootstrap</a>
       </p>
+      <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+          document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbf82a1a79f3b6b657f7aeb6035cb6d1a' type='text/javascript'%3E%3C/script%3E"));
+      </script>
     </footer>
   </div>
-
-  <script type="text/javascript">$('article.post a').attr('target', '_blank');</script>
   
 
+  
   
 </body>
 </html>

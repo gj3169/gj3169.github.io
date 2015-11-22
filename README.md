@@ -1,1 +1,2 @@
-请移步 <http://liberize.me/life/about-this-blog-template.html>。
+
+此Blog是我Fork的[liberize](http://liberize.me/)的模板，在此表示感谢！

@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html lang="zh-CN" class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
@@ -9,10 +8,9 @@
   <meta charset="UTF-8">
   <!--[if IE 8 ]><meta http-equiv="X-UA-Compatible" content="IE=7"><![endif]-->
 
+  <title>wentao's blog</title>
   
-  <title>liberize's blog - 西蒙宫的博客</title>
-  
-  <meta name="description" content="一个码农的技术博客，分享折腾的点点滴滴">
+  <meta name="description" content="编程爱好者，兴趣广泛">
   <meta name="author" content="西蒙宫">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +22,7 @@
   <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/themes/twitter/css/style.css">
+  <link rel="stylesheet" href="/assets/themes/twitter/css/style.min.css">
   <link rel="stylesheet" href="/assets/themes/twitter/css/font-awesome.min.css">
 
   <!-- Scripts -->
@@ -43,23 +41,27 @@
       <!-- Navigation Bar -->
       <nav id="navbar">
         <ul>
+          
           <li>
-            <a href="/" title="首页">首页</a>
-          </li>
-          <li>
-            <a href="/categories.html" title="分类">分类</a>
+            <a href="/" rel="nofollow" title="首页">首页</a>
           </li>
           <li>
-            <a href="/tags.html" title="标签">标签</a>
+            <a href="/categories.html" rel="nofollow" title="分类">分类</a>
           </li>
           <li>
-            <a href="/messages.html" title="留言板">留言板</a>
+            <a href="/tags.html" rel="nofollow" title="标签">标签</a>
           </li>
-          <li id="about-link" >
-            <a href="/about.html" title="关于我">关于我</a>
+          <li>
+            <a href="/messages.html" rel="nofollow" title="留言板">留言板</a>
           </li>
-          <li id="rss-link">
-            <a href="/rss.xml" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
+          <li>
+            <a href="" rel="nofollow" title="我的书单">我的书单</a>
+          </li>
+          <li>
+            <a href="/about.html" rel="nofollow" title="关于我">关于我</a>
+          </li>
+          <li>
+            <a href="/rss.xml" rel="nofollow" title="订阅 RSS"><i class="icon-large icon-fixed-width icon-rss"></i></a>
           </li>
         </ul>
       </nav>
@@ -124,7 +126,7 @@ $(document).ready(function() {
   function findEntries(q) {
     var matches = [];
     var rq = new RegExp(q, 'im');
-    var rl = /\/([^\/]+)\.html$/;
+    var rl = /^http:\/\/wentaotang\.github\.io\/post\/(.+)\.html$/;
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       var title = $(entry.getElementsByTagName('title')[0]).text();
@@ -169,7 +171,6 @@ $(document).ready(function() {
 
 });
 </script>
-
         </section>
         <section>
           <a href="/archive.html" title="查看所有文章"><i class="icon-fixed-width icon-file-text"></i> 最近发表</a>
@@ -197,21 +198,19 @@ $(document).ready(function() {
   <li><a href="/2015/06/%e9%ab%98%e6%95%88%e5%b7%a5%e4%bd%9c%e7%a7%98%e8%af%80%ef%bc%88%e6%9d%a5%e8%87%aa%e4%b8%80%e7%af%87%e8%8b%b1%e6%96%87%e6%96%87%e7%ab%a0%ef%bc%89/" title="查看《高效工作秘诀（来自一篇英文文章）》">高效工作秘诀（来自一篇英文文章）</a></li>
 
 </ul>
-
         </section>
         <section>
           <a href="/categories.html" title="查看所有分类"><i class="icon-fixed-width icon-folder-open"></i> 文章分类</a>
 <span title="分类总数">3</span>
 <ul>
 
-  <li><a href="/categories.html#未分类-ref">未分类 (23)</a></li>
+  <li><a href="/categories.html#未分类-ref" rel="nofollow">未分类 (23)</a></li>
 
-  <li><a href="/categories.html#Mail-ref">Mail (3)</a></li>
+  <li><a href="/categories.html#Mail-ref" rel="nofollow">Mail (3)</a></li>
 
-  <li><a href="/categories.html#Coding-ref">Coding (1)</a></li>
+  <li><a href="/categories.html#Coding-ref" rel="nofollow">Coding (1)</a></li>
 
 </ul>
-
         </section>
         <section>
           <a href="/tags.html" title="查看所有标签"><i class="icon-fixed-width icon-tags"></i> 标签云</a>
@@ -219,212 +218,200 @@ $(document).ready(function() {
 <div id="tag-cloud">
 
 
+  
+  <a href="/tags.html#受限-ref" rel="nofollow" style="font-size: 9pt; color: #999;">受限</a>
 
   
-  <a href="/tags.html#受限-ref" style="font-size: 9pt; color: #999;">受限</a>
+  <a href="/tags.html#批处理-ref" rel="nofollow" style="font-size: 9pt; color: #999;">批处理</a>
 
   
-  <a href="/tags.html#批处理-ref" style="font-size: 9pt; color: #999;">批处理</a>
+  <a href="/tags.html#无线网-ref" rel="nofollow" style="font-size: 9pt; color: #999;">无线网</a>
 
   
-  <a href="/tags.html#无线网-ref" style="font-size: 9pt; color: #999;">无线网</a>
+  <a href="/tags.html#centos-ref" rel="nofollow" style="font-size: 9pt; color: #999;">centos</a>
 
   
-  <a href="/tags.html#centos-ref" style="font-size: 9pt; color: #999;">centos</a>
+  <a href="/tags.html#debian-ref" rel="nofollow" style="font-size: 9pt; color: #999;">debian</a>
 
   
-  <a href="/tags.html#debian-ref" style="font-size: 9pt; color: #999;">debian</a>
+  <a href="/tags.html#linux-ref" rel="nofollow" style="font-size: 15pt; color: #333;">linux</a>
 
   
-  <a href="/tags.html#linux-ref" style="font-size: 15pt; color: #333;">linux</a>
+  <a href="/tags.html#shadowsocks-ref" rel="nofollow" style="font-size: 18pt; color: #000;">shadowsocks</a>
 
   
-  <a href="/tags.html#shadowsocks-ref" style="font-size: 18pt; color: #000;">shadowsocks</a>
+  <a href="/tags.html#一键-ref" rel="nofollow" style="font-size: 9pt; color: #999;">一键</a>
 
   
-  <a href="/tags.html#一键-ref" style="font-size: 9pt; color: #999;">一键</a>
+  <a href="/tags.html#脚本-ref" rel="nofollow" style="font-size: 9pt; color: #999;">脚本</a>
 
   
-  <a href="/tags.html#脚本-ref" style="font-size: 9pt; color: #999;">脚本</a>
+  <a href="/tags.html#GUI-ref" rel="nofollow" style="font-size: 9pt; color: #999;">GUI</a>
 
   
-  <a href="/tags.html#GUI-ref" style="font-size: 9pt; color: #999;">GUI</a>
+  <a href="/tags.html#matlab-ref" rel="nofollow" style="font-size: 9pt; color: #999;">matlab</a>
 
   
-  <a href="/tags.html#matlab-ref" style="font-size: 9pt; color: #999;">matlab</a>
+  <a href="/tags.html#popup-ref" rel="nofollow" style="font-size: 9pt; color: #999;">popup</a>
 
   
-  <a href="/tags.html#popup-ref" style="font-size: 9pt; color: #999;">popup</a>
+  <a href="/tags.html#关闭-ref" rel="nofollow" style="font-size: 9pt; color: #999;">关闭</a>
 
   
-  <a href="/tags.html#关闭-ref" style="font-size: 9pt; color: #999;">关闭</a>
+  <a href="/tags.html#日本-ref" rel="nofollow" style="font-size: 9pt; color: #999;">日本</a>
 
   
-  <a href="/tags.html#日本-ref" style="font-size: 9pt; color: #999;">日本</a>
+  <a href="/tags.html#百度-ref" rel="nofollow" style="font-size: 9pt; color: #999;">百度</a>
 
   
-  <a href="/tags.html#百度-ref" style="font-size: 9pt; color: #999;">百度</a>
+  <a href="/tags.html#流量-ref" rel="nofollow" style="font-size: 9pt; color: #999;">流量</a>
 
   
-  <a href="/tags.html#流量-ref" style="font-size: 9pt; color: #999;">流量</a>
+  <a href="/tags.html#资费-ref" rel="nofollow" style="font-size: 9pt; color: #999;">资费</a>
 
   
-  <a href="/tags.html#资费-ref" style="font-size: 9pt; color: #999;">资费</a>
+  <a href="/tags.html#运营商-ref" rel="nofollow" style="font-size: 9pt; color: #999;">运营商</a>
 
   
-  <a href="/tags.html#运营商-ref" style="font-size: 9pt; color: #999;">运营商</a>
+  <a href="/tags.html#降价-ref" rel="nofollow" style="font-size: 9pt; color: #999;">降价</a>
 
   
-  <a href="/tags.html#降价-ref" style="font-size: 9pt; color: #999;">降价</a>
+  <a href="/tags.html#直角-ref" rel="nofollow" style="font-size: 9pt; color: #999;">直角</a>
 
   
-  <a href="/tags.html#直角-ref" style="font-size: 9pt; color: #999;">直角</a>
+  <a href="/tags.html#钝角-ref" rel="nofollow" style="font-size: 9pt; color: #999;">钝角</a>
 
   
-  <a href="/tags.html#钝角-ref" style="font-size: 9pt; color: #999;">钝角</a>
+  <a href="/tags.html#上火-ref" rel="nofollow" style="font-size: 9pt; color: #999;">上火</a>
 
   
-  <a href="/tags.html#上火-ref" style="font-size: 9pt; color: #999;">上火</a>
+  <a href="/tags.html#google-ref" rel="nofollow" style="font-size: 12pt; color: #666;">google</a>
 
   
-  <a href="/tags.html#google-ref" style="font-size: 12pt; color: #666;">google</a>
+  <a href="/tags.html#打不开-ref" rel="nofollow" style="font-size: 9pt; color: #999;">打不开</a>
 
   
-  <a href="/tags.html#打不开-ref" style="font-size: 9pt; color: #999;">打不开</a>
+  <a href="/tags.html#谷歌-ref" rel="nofollow" style="font-size: 9pt; color: #999;">谷歌</a>
 
   
-  <a href="/tags.html#谷歌-ref" style="font-size: 9pt; color: #999;">谷歌</a>
+  <a href="/tags.html#习惯-ref" rel="nofollow" style="font-size: 9pt; color: #999;">习惯</a>
 
   
-  <a href="/tags.html#习惯-ref" style="font-size: 9pt; color: #999;">习惯</a>
+  <a href="/tags.html#人生-ref" rel="nofollow" style="font-size: 9pt; color: #999;">人生</a>
 
   
-  <a href="/tags.html#人生-ref" style="font-size: 9pt; color: #999;">人生</a>
+  <a href="/tags.html#性格-ref" rel="nofollow" style="font-size: 9pt; color: #999;">性格</a>
 
   
-  <a href="/tags.html#性格-ref" style="font-size: 9pt; color: #999;">性格</a>
+  <a href="/tags.html#改善-ref" rel="nofollow" style="font-size: 9pt; color: #999;">改善</a>
 
   
-  <a href="/tags.html#改善-ref" style="font-size: 9pt; color: #999;">改善</a>
+  <a href="/tags.html#交往-ref" rel="nofollow" style="font-size: 9pt; color: #999;">交往</a>
 
   
-  <a href="/tags.html#交往-ref" style="font-size: 9pt; color: #999;">交往</a>
+  <a href="/tags.html#男女-ref" rel="nofollow" style="font-size: 9pt; color: #999;">男女</a>
 
   
-  <a href="/tags.html#男女-ref" style="font-size: 9pt; color: #999;">男女</a>
+  <a href="/tags.html#迟到-ref" rel="nofollow" style="font-size: 9pt; color: #999;">迟到</a>
 
   
-  <a href="/tags.html#迟到-ref" style="font-size: 9pt; color: #999;">迟到</a>
+  <a href="/tags.html#VPS-ref" rel="nofollow" style="font-size: 9pt; color: #999;">VPS</a>
 
   
-  <a href="/tags.html#VPS-ref" style="font-size: 9pt; color: #999;">VPS</a>
+  <a href="/tags.html#搬瓦工-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搬瓦工</a>
 
   
-  <a href="/tags.html#搬瓦工-ref" style="font-size: 9pt; color: #999;">搬瓦工</a>
+  <a href="/tags.html#chrome-ref" rel="nofollow" style="font-size: 9pt; color: #999;">chrome</a>
 
   
-  <a href="/tags.html#chrome-ref" style="font-size: 9pt; color: #999;">chrome</a>
+  <a href="/tags.html#科学上网-ref" rel="nofollow" style="font-size: 15pt; color: #333;">科学上网</a>
 
   
-  <a href="/tags.html#科学上网-ref" style="font-size: 15pt; color: #333;">科学上网</a>
+  <a href="/tags.html#翻墙-ref" rel="nofollow" style="font-size: 9pt; color: #999;">翻墙</a>
 
   
-  <a href="/tags.html#翻墙-ref" style="font-size: 9pt; color: #999;">翻墙</a>
+  <a href="/tags.html#压缩-ref" rel="nofollow" style="font-size: 9pt; color: #999;">压缩</a>
 
   
-  <a href="/tags.html#压缩-ref" style="font-size: 9pt; color: #999;">压缩</a>
+  <a href="/tags.html#解压-ref" rel="nofollow" style="font-size: 9pt; color: #999;">解压</a>
 
   
-  <a href="/tags.html#解压-ref" style="font-size: 9pt; color: #999;">解压</a>
+  <a href="/tags.html#flash-ref" rel="nofollow" style="font-size: 9pt; color: #999;">flash</a>
 
   
-  <a href="/tags.html#flash-ref" style="font-size: 9pt; color: #999;">flash</a>
+  <a href="/tags.html#ubuntu-ref" rel="nofollow" style="font-size: 9pt; color: #999;">ubuntu</a>
 
   
-  <a href="/tags.html#ubuntu-ref" style="font-size: 9pt; color: #999;">ubuntu</a>
+  <a href="/tags.html#bt-ref" rel="nofollow" style="font-size: 9pt; color: #999;">bt</a>
 
   
-  <a href="/tags.html#bt-ref" style="font-size: 9pt; color: #999;">bt</a>
+  <a href="/tags.html#搜索-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搜索</a>
 
   
-  <a href="/tags.html#搜索-ref" style="font-size: 9pt; color: #999;">搜索</a>
+  <a href="/tags.html#种子-ref" rel="nofollow" style="font-size: 9pt; color: #999;">种子</a>
 
   
-  <a href="/tags.html#种子-ref" style="font-size: 9pt; color: #999;">种子</a>
+  <a href="/tags.html#高效-ref" rel="nofollow" style="font-size: 9pt; color: #999;">高效</a>
 
   
-  <a href="/tags.html#高效-ref" style="font-size: 9pt; color: #999;">高效</a>
+  <a href="/tags.html#Lantern-ref" rel="nofollow" style="font-size: 9pt; color: #999;">Lantern</a>
 
   
-  <a href="/tags.html#Lantern-ref" style="font-size: 9pt; color: #999;">Lantern</a>
+  <a href="/tags.html#PPTP-ref" rel="nofollow" style="font-size: 9pt; color: #999;">PPTP</a>
 
   
-  <a href="/tags.html#PPTP-ref" style="font-size: 9pt; color: #999;">PPTP</a>
+  <a href="/tags.html#VPN-ref" rel="nofollow" style="font-size: 9pt; color: #999;">VPN</a>
 
   
-  <a href="/tags.html#VPN-ref" style="font-size: 9pt; color: #999;">VPN</a>
+  <a href="/tags.html#搭建-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搭建</a>
 
   
-  <a href="/tags.html#搭建-ref" style="font-size: 9pt; color: #999;">搭建</a>
+  <a href="/tags.html#快搜-ref" rel="nofollow" style="font-size: 9pt; color: #999;">快搜</a>
 
   
-  <a href="/tags.html#快搜-ref" style="font-size: 9pt; color: #999;">快搜</a>
+  <a href="/tags.html#搜索引擎-ref" rel="nofollow" style="font-size: 9pt; color: #999;">搜索引擎</a>
 
   
-  <a href="/tags.html#搜索引擎-ref" style="font-size: 9pt; color: #999;">搜索引擎</a>
+  <a href="/tags.html#BitTorrent Sync-ref" rel="nofollow" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
 
   
-  <a href="/tags.html#BitTorrent Sync-ref" style="font-size: 9pt; color: #999;">BitTorrent Sync</a>
-
-  
-  <a href="/tags.html#文件同步-ref" style="font-size: 9pt; color: #999;">文件同步</a>
-
+  <a href="/tags.html#文件同步-ref" rel="nofollow" style="font-size: 9pt; color: #999;">文件同步</a>
 
 </div>
-
         </section>
-        <div id="fixed-container">
+         <div id="fixed-container">
   <section>
     <a href="#"><i class="icon-fixed-width icon-code"></i> 代码仓库</a>
 <ul>
-  <li><a href="http://github.com/liberize/liberize.github.com" target="_blank">本博客源码</a></li>
-  <li><a href="http://github.com/liberize/alfred-dict-workflow" target="_blank">Alfred 查词 workflow</a></li>
-  <li><a href="http://github.com/liberize/rhythmbox-doubanfm-plugin" target="_blank">Rhythmbox 豆瓣 FM 插件</a></li>
-  <li><a href="http://github.com/liberize/rhythmbox-osdlyrics-plugin" target="_blank">Rhythmbox 歌词插件</a></li>
-  <li><a href="http://github.com/liberize/sublime-text-plugins" target="_blank">Sublime Text 的一些小插件</a></li>
-  <li><a href="http://github.com/liberize/flame-detection-system" target="_blank">基于视频的火焰检测系统</a></li>
+  <li><a href="http://github.com/wentaotang/wentaotang.github.io">本博客源码</a></li>
 </ul>
-
   </section>
   <section>
     <a href="#"><i class="icon-fixed-width icon-heart"></i> 与我联系</a>
 <div id="contacts-list">
-  <a href="mailto:liberize@gmail.com" target="_blank" title="Gmail">
+  <a href="mailto:wentao_tang@126.com" target="_blank" rel="nofollow" title="网易126">
     <i class="icon-large icon-fixed-width icon-envelope"></i>
   </a>
-  <a href="https://github.com/liberize" target="_blank" title="Github">
+  <a href="https://github.com/wentaotang" target="_blank" rel="nofollow" title="Github">
     <i class="icon-large icon-fixed-width icon-github"></i>
   </a>
-  <a href="http://weibo.com/liberize" target="_blank" title="新浪微博">
+  <a href="http://weibo.com/u/2012516323" target="_blank" rel="nofollow" title="新浪微博">
     <i class="icon-large icon-fixed-width icon-weibo"></i>
   </a>
-  <a href="https://plus.google.com/118314345733357791088/" target="_blank" title="Google+">
+  <a href="https://plus.google.com/111343652736896481587/" target="_blank" rel="nofollow" title="Google+">
     <i class="icon-large icon-fixed-width icon-google-plus"></i>
   </a>
-  <a href="https://twitter.com/liberize" target="_blank" title="Twitter">
-    <i class="icon-large icon-fixed-width icon-twitter"></i>
-  </a>
 </div>
-
   </section>
+  <!-- 
   <section>
     <a href="#"><i class="icon-fixed-width icon-link"></i> 友情链接</a>
 <ul>
-  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid 模板引擎</a></li>
-  <li><a href="http://jekyllrb.com/" target="_blank">Jekyll 静态博客生成器</a></li>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank" rel="nofollow">Liquid 模板引擎</a></li>
+  <li><a href="http://jekyllrb.com/" target="_blank" rel="nofollow">Jekyll 静态博客生成器</a></li>
 </ul>
-
   </section>
+  -->
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -446,7 +433,6 @@ $(document).ready(function() {
   }
 });
 </script>
-
       </aside>
 
       <!-- Main Content -->
@@ -454,7 +440,6 @@ $(document).ready(function() {
         <div id="loader"><img src="/assets/themes/twitter/img/loading.gif" alt="请稍侯"></div>
         <div id="main-content">
           
-
 
 <!-- Recent Posts  -->
 <section>
@@ -473,15 +458,15 @@ $(document).ready(function() {
 
 近日，在国务院总理李克强主持召开的经济形势座谈会上，网易董事局主席兼CEO丁磊呼吁网速提上去、资费降下来，引起了国务院的关注和重视。之后不久，工信部公开表态，将推动企业加大网络投资，降低手机流量资费，已立即布置相关企...
       </p>
-      <a class="button-link" href="/2015/04/yunyingshangliuliangzifeijiangjiananzainaer/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/yunyingshangliuliangzifeijiangjiananzainaer/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">22 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/yunyingshangliuliangzifeijiangjiananzainaer/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="运营商流量资费降价难在哪儿" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-22" rel="nofollow" title="查看此月所有文章">2015-04-22</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/yunyingshangliuliangzifeijiangjiananzainaer/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="运营商流量资费降价难在哪儿" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -498,15 +483,15 @@ $(document).ready(function() {
         测试ifttt能否发wordpress 文章
 
       </p>
-      <a class="button-link" href="/2015/04/zheshiyigeiftttceshi/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/zheshiyigeiftttceshi/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">21 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/zheshiyigeiftttceshi/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="这是一个ifttt测试" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-21" rel="nofollow" title="查看此月所有文章">2015-04-21</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#Mail-ref" rel="nofollow" title="查看此类别下的所有文章">Mail</a>，
+        评论：<a href="/2015/04/zheshiyigeiftttceshi/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="这是一个ifttt测试" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -525,15 +510,15 @@ $(document).ready(function() {
 之后，百度一名发言人面对媒体采访时透露，确认百度日本搜索引擎已关闭。这位发言人还说，百度日本搜索引擎实际上是于3月16日关闭的，不过，此前似乎无人注意到该服务的关闭，而媒体也没有对此进行报道，直到一个月后人们才偶然发现这个服务关闭了。从这个情节上来看，百度日本搜索引擎的确是不太受欢迎，其用户量之少也是显而易见的。
 公开资料显示，2006年百度宣布其国际化战略，并以日本市场为出击首...
       </p>
-      <a class="button-link" href="/2015/04/baiduguanbiribenbaidusousuoyinqing/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/baiduguanbiribenbaidusousuoyinqing/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">21 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/baiduguanbiribenbaidusousuoyinqing/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="百度关闭日本百度搜索引擎" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-21" rel="nofollow" title="查看此月所有文章">2015-04-21</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#Mail-ref" rel="nofollow" title="查看此类别下的所有文章">Mail</a>，
+        评论：<a href="/2015/04/baiduguanbiribenbaidusousuoyinqing/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="百度关闭日本百度搜索引擎" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -593,15 +578,15 @@ $(document).ready(function() {
 
 ...
       </p>
-      <a class="button-link" href="/2015/04/yigematlabguishiyonglizipop-upmenudeyongfa/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/yigematlabguishiyonglizipop-upmenudeyongfa/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">17 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/yigematlabguishiyonglizipop-upmenudeyongfa/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="一个matlab GUI使用例子，pop-up menu的用法" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-17" rel="nofollow" title="查看此月所有文章">2015-04-17</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/yigematlabguishiyonglizipop-upmenudeyongfa/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="一个matlab GUI使用例子，pop-up menu的用法" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -629,15 +614,15 @@ $(document).ready(function() {
 关于本脚本：
 一键安装 go 版的 shadowsocks 最新版本 1.1.3。据说 go 版本有 buff ，但是我没看到。与 py...
       </p>
-      <a class="button-link" href="/2015/04/shadowsocks-goyijiananzhuangjiaoben/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/shadowsocks-goyijiananzhuangjiaoben/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">17 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/shadowsocks-goyijiananzhuangjiaoben/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="Shadowsocks-go一键安装脚本" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-17" rel="nofollow" title="查看此月所有文章">2015-04-17</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/shadowsocks-goyijiananzhuangjiaoben/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="Shadowsocks-go一键安装脚本" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -674,15 +659,15 @@ $(document).ready(function() {
   
   ...
       </p>
-      <a class="button-link" href="/2015/04/pichulifangfajiejuewuxianwangbudingqishouxianwenti/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/pichulifangfajiejuewuxianwangbudingqishouxianwenti/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">17 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/pichulifangfajiejuewuxianwangbudingqishouxianwenti/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="批处理方法 解决无线网不定期“受限”问题" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-17" rel="nofollow" title="查看此月所有文章">2015-04-17</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/pichulifangfajiejuewuxianwangbudingqishouxianwenti/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="批处理方法 解决无线网不定期“受限”问题" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -699,15 +684,15 @@ $(document).ready(function() {
         我西蒙宫的博客也开始运行啦，好开森！
 
       </p>
-      <a class="button-link" href="/2015/04/hello-world-2/" title="查看全文">read more</a>
+      <a class="button-link" href="/2015/04/hello-world-2/" rel="nofollow" title="查看全文">read more</a>
     </section>
 
     <footer>
       <p>
-        发表日期：<a href="/archive.html#April-2015" title="查看此月所有文章">17 April 2015</a>，
-        作者：<a href="mailto:ximenggong@outlook.com" title="向作者发送邮件">西蒙宫</a>，
-        类别：<a href="/categories.html#-ref" title="查看此类别下的所有文章"></a>，
-        评论：<a href="/2015/04/hello-world-2/#ds-thread" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="Hello, everyone！" data-count-type="comments"></span></a>
+        发表日期：<a href="/archive.html#2015-04-17" rel="nofollow" title="查看此月所有文章">2015-04-17</a>，
+        作者：<a href="mailto:ximenggong@outlook.com" rel="nofollow" title="向作者发送邮件">西蒙宫</a>，
+        类别：<a href="/categories.html#未分类-ref" rel="nofollow" title="查看此类别下的所有文章">未分类</a>，
+        评论：<a href="/2015/04/hello-world-2/#ds-thread" rel="nofollow" title="查看此文章的评论"><span class="ds-thread-count" data-thread-key="Hello, everyone！" data-count-type="comments"></span></a>
       </p>
     </footer>
 
@@ -791,20 +776,22 @@ $(document).ready(function () {
 });
 </script>
 
-
     </section>
 
     <footer id="bottom">
       <p align="center">&copy; 2015 西蒙宫
-        with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        with help from <a href="http://jekyllbootstrap.com" target="_blank" rel="nofollow" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank" rel="nofollow">Twitter Bootstrap</a>
       </p>
+      <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+          document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbf82a1a79f3b6b657f7aeb6035cb6d1a' type='text/javascript'%3E%3C/script%3E"));
+      </script>
     </footer>
   </div>
-
-  <script type="text/javascript">$('article.post a').attr('target', '_blank');</script>
   
 
+  
   
 </body>
 </html>
