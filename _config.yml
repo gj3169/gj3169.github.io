@@ -1,16 +1,9 @@
 # This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:year/:month/:day/:title/
+# For more see: http://jekyllrb.com/docs/permalinks/
+permalink: /:categories/:year/:month/:day/:title 
 
-safe: false
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-gems: [jekyll-paginate]
-paginate: 10
-encoding: utf-8
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "tables"]
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -18,10 +11,11 @@ redcarpet:
 title : 西蒙宫的博客
 tagline: I think, therefore I am.
 author :
-  name : 西蒙宫
+  name : Simon Gong
   email : ximenggong@outlook.com
   github : gj3169
   twitter : simon_gong
+  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -32,7 +26,6 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://simongong.net
-cdn_url : http://7xind4.com1.z0.glb.clouddn.com/
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -72,7 +65,6 @@ JB :
   #   /assets
   #
   ASSET_PATH : false
-  IMAGE_PATH : false
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -82,8 +74,6 @@ JB :
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
-  messages_path : /messages.html
-  about_path : /about.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -91,10 +81,8 @@ JB :
   #
   comments :
     provider : duoshuo
-    duoshuo :
-      short_name : ximenggong
     disqus :
-      short_name : disqus_iLqTmDPzLq
+      short_name : jekyllbootstrap
     livefyre :
       site_id : 123
     intensedebate :
@@ -104,21 +92,26 @@ JB :
       num_posts: 5
       width: 580
       colorscheme: light
-
+    duoshuo :
+      short_name : ximenggong
+   
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
   analytics :
-    provider : baidu
-    baidu :
-      tracking_id : '2f8f4ec615018c3c8438706c2516c91f' 
+    provider : google
+    gauges :
+        site_id : 'SITE ID'
     google : 
-      tracking_id : 'UA-70441296-1'
+        tracking_id : 'UA-70441296-1'
     getclicky :
       site_id : 
     mixpanel :
-      token : '_MIXPANEL_TOKEN_'
+        token : '_MIXPANEL_TOKEN_'
+    piwik :
+        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
@@ -127,7 +120,7 @@ JB :
   #
   sharing :
     provider : false
-
+    
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
@@ -138,3 +131,4 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
+  

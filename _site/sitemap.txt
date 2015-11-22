@@ -1,21 +1,15 @@
 
-http://simongong.net/404/
-http://simongong.net/about/
-http://simongong.net/archive/
+http://simongong.net/archive
 http://simongong.net/atom.xml
-http://simongong.net/book/
-http://simongong.net/categories/
+http://simongong.net/categories
 http://simongong.net/
-http://simongong.net/messages/
-http://simongong.net/pages/
+http://simongong.net/pages
 http://simongong.net/rss.xml
 http://simongong.net/sitemap.txt
-http://simongong.net/tags/
-http://simongong.net/page2/
-http://simongong.net/page3/
+http://simongong.net/tags
 
-http://simongong.net/2015/11/19/bokeqianyidaogithub/
-http://simongong.net/2015/10/30/bittorrent-sync/
+http://simongong.net/coding/2015/11/19/bokeqianyidaogithub
+http://simongong.net/%E6%9C%AA%E5%88%86%E7%B1%BB/2015/10/30/bittorrent-sync
 http://simongong.net/2015/10/python%e4%b8%ad%e6%96%87%e4%b9%b1%e7%a0%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88/
 http://simongong.net/2015/10/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e6%8e%a8%e8%8d%90/
 http://simongong.net/2015/09/%e6%90%ad%e5%bb%bavpn%ef%bc%8c%e4%bd%8e%e4%bb%b7%e4%ba%ab%e7%94%a8%e8%87%aa%e5%b7%b1%e7%8b%ac%e4%ba%ab%e7%9a%84vpn/
