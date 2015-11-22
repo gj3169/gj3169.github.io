@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 西蒙宫的博客
+title: 
 tagline: I think, therefore I am.
 ---
 {% include JB/setup %}
