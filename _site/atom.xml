@@ -3,7 +3,7 @@
   <title>西蒙宫的博客</title>
   <link href="http://simongong.net/atom.xml" rel="self"/>
   <link href="http://simongong.net"/>
-  <updated>2015-11-21T22:56:49+08:00</updated>
+  <updated>2015-11-22T11:23:33+08:00</updated>
   <id>http://simongong.net</id>
   <author>
     <name>西蒙宫</name>
@@ -40,7 +40,7 @@ jekyll的所有依赖一定要安装完整（依赖是什么可以google之）
   </entry>
 
   <entry>
-    <title>带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）</title>
+    <title>文件同步工具简介——BitTorrent Sync（科学上网工具分享）</title>
     <link href="http://simongong.net/2015/10/30/e5-b8-a6-e6-9c-89p2p-e6-80-9d-e6-83-b3-e7-9a-84-e6-96-87-e4-bb-b6-e5-90-8c-e6-ad-a5-e5-b7-a5-e5-85-b7-e7-ae-80-e4-bb-8b-bittorrent-sync-ef-bc-88-e6-96-87-e5-86-85-e5-85-bc-e6-9c-89/"/>
     <updated>2015-10-30T00:00:00+08:00</updated>
     <id>http://simongong.net/2015/10/30/%e5%b8%a6%e6%9c%89p2p%e6%80%9d%e6%83%b3%e7%9a%84%e6%96%87%e4%bb%b6%e5%90%8c%e6%ad%a5%e5%b7%a5%e5%85%b7%e7%ae%80%e4%bb%8b-bittorrent-sync%ef%bc%88%e6%96%87%e5%86%85%e5%85%bc%e6%9c%89</id>

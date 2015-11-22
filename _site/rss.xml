@@ -5,8 +5,8 @@
   <description>西蒙宫的博客 - I think, therefore I am.</description>
   <atom:link href="http://simongong.net/rss.xml" rel="self" type="application/rss+xml"/>
   <link>http://simongong.net</link>
-  <lastBuildDate>Sat, 21 Nov 2015 22:56:49 +0800</lastBuildDate>
-  <pubDate>Sat, 21 Nov 2015 22:56:49 +0800</pubDate>
+  <lastBuildDate>Sun, 22 Nov 2015 11:23:33 +0800</lastBuildDate>
+  <pubDate>Sun, 22 Nov 2015 11:23:33 +0800</pubDate>
   <ttl>1800</ttl>
 
 
@@ -47,7 +47,7 @@
   </item>
 
   <item>
-    <title>带有P2P思想的文件同步工具简介——BitTorrent Sync（文内兼有科学上网工具分享）</title>
+    <title>文件同步工具简介——BitTorrent Sync（科学上网工具分享）</title>
     <description>&lt;p&gt;看名字知道，这个软件与网络上广泛使用的BT下载方法很有渊源，没错，他与BitTorrent软件的公司是同一家。官方网站：&lt;a href=&quot;https://www.getsync.com/&quot;&gt;https://www.getsync.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;BitTorrent Sync是一款用户自己的个人云网盘，文件大小不限，空间不限，注重隐私，分享文件不受版权限制，不受墙的限制，非常好用。&lt;/p&gt;
