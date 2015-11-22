@@ -3,63 +3,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>chrome shadowsocks 配合 GFWlist无缝科学上网</title>
     
     <meta name="author" content="Simon Gong">
 
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional theme -->
-    <link href="/assets/themes//bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Sticky Footer -->
-    <link href="/assets/themes//bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
-    
-    <!-- Custom styles -->
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
+    <!-- Le styles -->
+    <link href="/assets/themes//css/1.4.0/bootstrap.css" rel="stylesheet">
+    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
   </head>
 
   <body>
-    <div id="wrap">
-      <nav class="navbar navbar-default" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">西蒙宫的博客</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="jb-navbar-collapse">
-          <ul class="nav navbar-nav">
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">西蒙宫的博客</a>
+          <ul class="nav">
             
             
             
@@ -118,28 +90,21 @@
 
 
           </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div><!-- /.navbar-collapse -->
-      </nav>
+        </div>
+      </div>
+    </div>
 
-      <div class="container">
+    <div class="container">
+
+      <div class="content">
         
 <div class="page-header">
-  <h1>chrome shadowsocks 配合 GFWlist无缝科学上网 </h1>
+  <h1>chrome shadowsocks 配合 GFWlist无缝科学上网 <small>Supporting tagline</small></h1>
 </div>
 
-<div class="row post-full">
-  <div class="col-xs-12">
-    <div class="date">
-      <span>11 June 2015</span>
-    </div>
-    <div class="content">
-      <p>科学上网的各位是否发现一件挺恼人的事情，就是所上的网站并非都是那些被墙的网站，很多时候需要上一些baidu啦weibo啦等国内网站，如果一直用翻墙工具，反而会很慢，两者切换很麻烦，本文介绍一种方法帮你解除烦恼。</p>
+<div class="row">
+  <div class="span10">
+    <p>科学上网的各位是否发现一件挺恼人的事情，就是所上的网站并非都是那些被墙的网站，很多时候需要上一些baidu啦weibo啦等国内网站，如果一直用翻墙工具，反而会很慢，两者切换很麻烦，本文介绍一种方法帮你解除烦恼。</p>
 
 <p>shadowsocks的使用方法在本文就不再赘述，因为网上已经有很成熟的教程了，大体上分两步：1、部署服务器端的shadowsocks server，2、部署你自己电脑上的shadowsocks client，如果有不甚了解的各位可以参考shadowsocks 的github网站： https://github.com/shadowsocks/shadowsocks</p>
 
@@ -206,61 +171,18 @@
 <p>现在畅快的玩耍吧！</p>
 
 
-    </div>
-
-  
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-open"></i></li>
-      
-      
-
-
-  
-     
-    	<li><a href="/categories.html#未分类-ref">
-    		未分类 <span>23</span>
-    	</a></li>
-    
-  
-
-
-    </ul>
-    
-
-  
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-tags"></i></li>
-      
-      
-
-
-  
-     
-    	<li><a href="/tags.html#chrome-ref">chrome <span>1</span></a></li>
-     
-    	<li><a href="/tags.html#shadowsocks-ref">shadowsocks <span>4</span></a></li>
-     
-    	<li><a href="/tags.html#科学上网-ref">科学上网 <span>3</span></a></li>
-     
-    	<li><a href="/tags.html#翻墙-ref">翻墙 <span>1</span></a></li>
-    
-  
-
-
-
-    </ul>
-    
-  
     <hr>
-    <ul class="pagination">
-    
-      <li class="prev"><a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" title="简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS">&laquo; Previous</a></li>
-    
-      <li><a href="/archive.html">Archive</a></li>
-    
-      <li class="next"><a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" title="linux 解压、打包命令大全">Next &raquo;</a></li>
-    
-    </ul>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/2015/06/%e7%ae%80%e5%8d%95%e7%9a%84%e6%a2%af%e5%ad%90%e6%90%ad%e5%bb%ba%e6%96%b9%e6%b3%95%ef%bc%8c%e6%9c%80%e5%b0%8f%e6%88%90%e6%9c%ac%ef%bc%8c%e6%9c%80%e6%96%b9%e4%be%bf%e4%b9%8b%e9%80%89/" title="简单的梯子搭建方法，最小成本，最方便之选——搬瓦工VPS">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/2015/06/linux-%e8%a7%a3%e5%8e%8b%e3%80%81%e6%89%93%e5%8c%85%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8/" title="linux 解压、打包命令大全">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
     <hr>
     
 
@@ -284,32 +206,53 @@ var duoshuoQuery = {short_name:'ximenggong'};
 
 
   </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>11 June 2015</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#chrome-ref">chrome <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#shadowsocks-ref">shadowsocks <span>4</span></a></li>
+     
+    	<li><a href="/tags.html#科学上网-ref">科学上网 <span>3</span></a></li>
+     
+    	<li><a href="/tags.html#翻墙-ref">翻墙 <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
 </div>
 
 
       </div>
 
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p>&copy; 2015 Simon Gong
+      <footer>
+        <p>&copy; Simon Gong 2012 
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
-      </div>
-    </div>
+      </footer>
+
+    </div> <!-- /container -->
 
     
 
 
 
-
-
-    <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/assets/themes//bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 
