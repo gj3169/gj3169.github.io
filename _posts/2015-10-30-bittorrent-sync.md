@@ -1,5 +1,5 @@
 ---
-title: 文件同步工具简介——BitTorrent Sync（科学上网工具分享）
+title: 文件同步工具简介——BitTorrent Sync（科学上网工具）
 author: gj3169
 layout: post
 post_stats:

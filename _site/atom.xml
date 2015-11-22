@@ -3,7 +3,7 @@
   <title>西蒙宫的博客</title>
   <link href="http://simongong.net/atom.xml" rel="self"/>
   <link href="http://simongong.net"/>
-  <updated>2015-11-22T11:23:33+08:00</updated>
+  <updated>2015-11-22T11:26:04+08:00</updated>
   <id>http://simongong.net</id>
   <author>
     <name>西蒙宫</name>
@@ -40,10 +40,10 @@ jekyll的所有依赖一定要安装完整（依赖是什么可以google之）
   </entry>
 
   <entry>
-    <title>文件同步工具简介——BitTorrent Sync（科学上网工具分享）</title>
-    <link href="http://simongong.net/2015/10/30/e5-b8-a6-e6-9c-89p2p-e6-80-9d-e6-83-b3-e7-9a-84-e6-96-87-e4-bb-b6-e5-90-8c-e6-ad-a5-e5-b7-a5-e5-85-b7-e7-ae-80-e4-bb-8b-bittorrent-sync-ef-bc-88-e6-96-87-e5-86-85-e5-85-bc-e6-9c-89/"/>
+    <title>文件同步工具简介——BitTorrent Sync（科学上网工具）</title>
+    <link href="http://simongong.net/2015/10/30/bittorrent-sync/"/>
     <updated>2015-10-30T00:00:00+08:00</updated>
-    <id>http://simongong.net/2015/10/30/%e5%b8%a6%e6%9c%89p2p%e6%80%9d%e6%83%b3%e7%9a%84%e6%96%87%e4%bb%b6%e5%90%8c%e6%ad%a5%e5%b7%a5%e5%85%b7%e7%ae%80%e4%bb%8b-bittorrent-sync%ef%bc%88%e6%96%87%e5%86%85%e5%85%bc%e6%9c%89</id>
+    <id>http://simongong.net/2015/10/30/bittorrent-sync</id>
     <content type="html">看名字知道，这个软件与网络上广泛使用的BT下载方法很有渊源，没错，他与BitTorrent软件的公司是同一家。官方网站：https://www.getsync.com/
 
 BitTorrent Sync是一款用户自己的个人云网盘，文件大小不限，空间不限，注重隐私，分享文件不受版权限制，不受墙的限制，非常好用。
