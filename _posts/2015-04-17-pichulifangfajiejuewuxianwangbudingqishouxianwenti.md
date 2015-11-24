@@ -10,7 +10,7 @@ tc-thumb-fld:
 post_stats:
   - 1
 categories:
-  - 未分类
+  - coding
 tags:
   - 受限
   - 批处理

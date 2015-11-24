@@ -10,7 +10,7 @@ tc-thumb-fld:
 post_stats:
   - 4
 categories:
-  - 未分类
+  - news
 tags:
   - 流量
   - 资费

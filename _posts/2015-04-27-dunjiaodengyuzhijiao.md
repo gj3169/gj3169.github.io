@@ -10,7 +10,7 @@ travelify_sidebarlayout:
 tc-thumb-fld:
   - 'a:2:{s:9:"_thumb_id";i:56;s:11:"_thumb_type";s:10:"attachment";}'
 categories:
-  - Mail
+  - 脑洞
 tags:
   - 直角
   - 钝角

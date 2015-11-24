@@ -8,7 +8,7 @@ post_stats:
 views:
   - 2
 categories:
-  - 未分类
+  - coding
 tags:
   - flash
   - linux

@@ -4,13 +4,31 @@
  <title>西蒙宫的博客</title>
  <link href="http://simongong.net/atom.xml" rel="self"/>
  <link href="http://simongong.net"/>
- <updated>2015-11-24T22:32:59+08:00</updated>
+ <updated>2015-11-25T00:06:48+08:00</updated>
  <id>http://simongong.net</id>
  <author>
    <name>Simon Gong</name>
    <email>ximenggong@outlook.com</email>
  </author>
 
+ 
+ <entry>
+   <title>chrome吐槽</title>
+   <link href="http://simongong.net/%E5%90%90%E6%A7%BD/2015/11/24/chrometucao"/>
+   <updated>2015-11-24T00:00:00+08:00</updated>
+   <id>http://simongong.net/%E5%90%90%E6%A7%BD/2015/11/24/chrometucao</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://7xind4.com1.z0.glb.clouddn.com/jekyllQQ截图20151124221512.png&quot; alt=&quot;chrome截图&quot; /&gt;
+显示器分辨率：1920*1080
+操作系统win8 64位
+chrome最新版&lt;/p&gt;
+
+&lt;p&gt;空白页太大了吧，也试过一些插件，效果都不理想。要么不够简洁，要么&lt;strong&gt;太丑&lt;/strong&gt;！&lt;/p&gt;
+
+&lt;p&gt;之前也曾经试过搜狗或者是360浏览器，比较起来还是原生chrome强一些，但这个空白页实在是无力吐槽了！！！&lt;/p&gt;
+
+&lt;p&gt;希望哪天google能好好整整这个界面，内心真心希望google的chrome能好用起来啊~~~&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>博客迁移到github，基于jekyll</title>
@@ -50,9 +68,9 @@
  
  <entry>
    <title>文件同步工具简介——BitTorrent Sync（科学上网工具）</title>
-   <link href="http://simongong.net/%E6%9C%AA%E5%88%86%E7%B1%BB/2015/10/30/bittorrent-sync"/>
+   <link href="http://simongong.net/%E7%94%9F%E6%B4%BB/2015/10/30/bittorrent-sync"/>
    <updated>2015-10-30T00:00:00+08:00</updated>
-   <id>http://simongong.net/%E6%9C%AA%E5%88%86%E7%B1%BB/2015/10/30/bittorrent-sync</id>
+   <id>http://simongong.net/%E7%94%9F%E6%B4%BB/2015/10/30/bittorrent-sync</id>
    <content type="html">&lt;p&gt;看名字知道，这个软件与网络上广泛使用的BT下载方法很有渊源，没错，他与BitTorrent软件的公司是同一家。官方网站：&lt;a href=&quot;https://www.getsync.com/&quot;&gt;https://www.getsync.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;BitTorrent Sync是一款用户自己的个人云网盘，文件大小不限，空间不限，注重隐私，分享文件不受版权限制，不受墙的限制，非常好用。&lt;/p&gt;
@@ -1311,23 +1329,6 @@ BtDigg国外磁力站点。以优质且收录快速而出名。其对应的浏�
 
 &lt;p&gt;建议已经“上火”的你：&lt;br /&gt;
 千万别硬扛着，快去找医生诊断清楚吧！~&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>钝角等于直角？！</title>
-   <link href="http://simongong.net/2015/04/dunjiaodengyuzhijiao/"/>
-   <updated>2015-04-27T00:00:00+08:00</updated>
-   <id>http://simongong.net/2015/04/dunjiaodengyuzhijiao</id>
-   <content type="html">&lt;p&gt;下面贴出古希腊数学家给出的证明（转自果壳）如下图，ABCD为矩形，在矩形外选取一点E，使得DC=DE。G、F分别为BC、BE中点，然后过G、F分别作垂线，两条垂线相交于H。连接H与ABDE四点，就形成了下图，为了让证明过程更清晰，已经把一些相等的线段染成了同一种颜色。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/04/b_large_qrJw_403100001a1d1263.jpg&quot;&gt;&lt;img class=&quot;alignnone size-medium wp-image-56&quot; src=&quot;http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/04/b_large_qrJw_403100001a1d1263-300x287.jpg&quot; alt=&quot;b_large_qrJw_403100001a1d1263&quot; width=&quot;300&quot; height=&quot;287&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;因H在AD的垂直平分线上，故AH=DH。因H在BE的垂直平分上，故BH=EH。因DC=DE且ABCD为矩形，故AB=DE。至此，ΔABH和ΔDEH的三边都相等，根据“边边边”（初中平面几何里学的全等三角形判定条件之一），ΔABH与ΔDEH全等。因此∠BAH=∠EDH。上式两边分别减去∠HAD和∠HDA（因等腰三角形，这二角显然相等），则可得出图中α、β二角相等！显然，α为直角，而β为钝角！&lt;br /&gt;
-因此可以得出我们的结论：钝角等于直角！&lt;/p&gt;
-
-&lt;p&gt;哇卡卡！！！&lt;/p&gt;
-
 </content>
  </entry>
  

@@ -14,6 +14,8 @@ tc-thumb-fld:
 post_stats:
   - 1
 categories:
-  - Mail
+  - other
+tags:
+  -ifttt
 ---
 测试ifttt能否发wordpress 文章

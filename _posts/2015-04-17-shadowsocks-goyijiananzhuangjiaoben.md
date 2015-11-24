@@ -8,7 +8,7 @@ views:
 post_stats:
   - 1
 categories:
-  - 未分类
+  - coding
 tags:
   - centos
   - debian

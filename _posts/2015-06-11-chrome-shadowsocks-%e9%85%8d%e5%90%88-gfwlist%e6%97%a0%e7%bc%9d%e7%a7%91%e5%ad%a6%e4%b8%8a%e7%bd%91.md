@@ -8,7 +8,7 @@ post_stats:
 views:
   - 5
 categories:
-  - 未分类
+  - coding
 tags:
   - chrome
   - shadowsocks

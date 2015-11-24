@@ -10,7 +10,7 @@ tc-thumb-fld:
 post_stats:
   - 1
 categories:
-  - Mail
+  - news
 tags:
   - 关闭
   - 日本

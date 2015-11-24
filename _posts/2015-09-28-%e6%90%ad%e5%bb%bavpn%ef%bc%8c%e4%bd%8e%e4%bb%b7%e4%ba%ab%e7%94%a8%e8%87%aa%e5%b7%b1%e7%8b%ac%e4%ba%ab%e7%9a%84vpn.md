@@ -10,7 +10,7 @@ post_stats:
 dsq_thread_id:
   - 4308512616
 categories:
-  - 未分类
+  - coding
 tags:
   - PPTP
   - VPN

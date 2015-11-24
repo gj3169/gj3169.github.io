@@ -10,7 +10,7 @@ tc-thumb-fld:
 post_stats:
   - 1
 categories:
-  - 未分类
+  - 生活
 tags:
   - 交往
   - 男女

@@ -3,6 +3,9 @@ title: 博客迁移到github，基于jekyll
 layout: post
 categories:
   - Coding
+tags:
+  - jekyll
+  - github
 ---
 
 ##写在前面

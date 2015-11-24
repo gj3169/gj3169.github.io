@@ -9,7 +9,7 @@ views:
 dsq_thread_id:
   - 4308109768
 categories:
-  - 未分类
+  - 生活
 tags:
   - BitTorrent Sync
   - 文件同步
