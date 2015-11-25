@@ -1,19 +1,32 @@
 ---
-layout: page
-title: 
-tagline: I think, therefore I am.
+layout: post
+title: Welcome
 ---
-{% include JB/setup %}
 
-##强烈推荐
+## 对博客的理解
+----
 
-**[简便易行VPN搭建方法](http://simongong.net/2015/09/%E6%90%AD%E5%BB%BAvpn%EF%BC%8C%E4%BD%8E%E4%BB%B7%E4%BA%AB%E7%94%A8%E8%87%AA%E5%B7%B1%E7%8B%AC%E4%BA%AB%E7%9A%84vpn/)**
+人生寥寥几十年，如果不记录一些东西，似乎一生过得过于碌碌。
 
-## 文章列表
+为了增加一些记录，人老的时候能够有所回忆，开始写这个博客。
+
+博客内容大多为技术，也有一些絮絮叨叨，各位客官可以一起聊聊天，喝喝茶。
+
+本博客90%为原创，10%来自于网络文章
+
+## 关于我
+---
+网名西蒙宫，编程业余爱好者，兴趣广泛，可一起玩耍切磋，大家一起共同学习。
+
+-   主修燃料电池模拟工作
+-   matlab，python，c，Java都会一些
+-   喜欢乒乓球，喜欢滑雪，蹦极等运动
+-   linux系统命令熟悉
+-   其他（数据库，网站部署，linux，个人生活等会少量涉及）
 
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+## 最后
+---
+这个博客通过 [Jekyll](http://jekyllrb.com/) 生成，博客的源码托管在[Github](https://github.com/gj3169/gj3169.github.io)上，如果有任何改进意见，欢迎讨论。
+
+如果有问题可以直接评论,或是给我发邮件。除此之外可以通过RRS订阅blog的更新，点击左下角两个图标即可。如果觉得写的不错，就给我点个赞或是github上follow我一下。谢谢大家的支持。
