@@ -4,6 +4,7 @@ categories: 生活
 tags: 
   - 图片
   - 句子
+layout: post
 ---
 
 看到一幅挺好的图片，记录一下！
