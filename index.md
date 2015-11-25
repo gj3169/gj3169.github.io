@@ -12,28 +12,8 @@ tagline: I think, therefore I am.
 ## 文章列表
 
 
-
-{% if paginator.page > 2 %} 
-<li><a href="/page{{paginator.previous_page}}/">上一页</a></li> 
-{% endif %} 
-{% assign pageSize = 5 %} 
-{% assign startPage = paginator.page | minus:pageSize %} 
-{% if 2 > startPage %}	
-{%	assign startPage = 2 %} 
-{% endif %} 
-{% assign endPage = paginator.page | plus:pageSize %} 
-{% if endPage >= paginator.total_pages %}	
-{%	assign endPage = paginator.total_pages | minus:1 %} 
-{% endif %} 
-{% for count in (startPage..endPage) %} 
-{% if count == paginator.page %} 
-<li><a href="#"><span class="current-page">{{count}}</span></a></li> 
-{% else %} 
-<li><a href="/page{{count}}/">{{count}}</a></li> 
-{% endif %} 
-{% endfor %} 
-{% if paginator.next_page %} 
-<li><a href="/page{{paginator.next_page}}/">下一页</a></li> 
-{% endif %} 
-<li><a href="/page{{paginator.total_pages}}/">末页</a></li> 
-<li><a href="#">第{{paginator.page}}页 / 共{{paginator.total_pages}}页</a></li>
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
