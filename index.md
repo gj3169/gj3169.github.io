@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Welcome
+title: Welcome to 西蒙宫的博客
 ---
 
 ## 对博客的理解
