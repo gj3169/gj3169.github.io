@@ -19,7 +19,7 @@ title: Welcome
 网名西蒙宫，编程业余爱好者，兴趣广泛，可一起玩耍切磋，大家一起共同学习。
 
 -   主修燃料电池模拟工作
--   matlab，python，c，Java都会一些
+-   matlab，python，c，Java，comsol都会一些
 -   喜欢乒乓球，喜欢滑雪，蹦极等运动
 -   linux系统命令熟悉
 -   其他（数据库，网站部署，linux，个人生活等会少量涉及）
