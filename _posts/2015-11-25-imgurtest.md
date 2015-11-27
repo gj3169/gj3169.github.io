@@ -1,7 +1,7 @@
 ---
 title: imgur图床测试
 categories: 建站技巧
-layout: post
+layouts: post
 tags: 
   -imgur
   -图床
