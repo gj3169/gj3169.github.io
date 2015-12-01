@@ -39,7 +39,6 @@ ga:
 # disqus 设置
 disqus:
   shortname: simongong
-=======
 description: 编程爱好者，兴趣广泛
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
