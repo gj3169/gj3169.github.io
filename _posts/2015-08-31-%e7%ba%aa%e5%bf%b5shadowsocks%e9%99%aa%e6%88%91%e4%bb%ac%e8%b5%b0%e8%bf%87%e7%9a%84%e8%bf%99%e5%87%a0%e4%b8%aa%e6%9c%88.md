@@ -10,7 +10,11 @@ views:
 dsq_thread_id:
   - 4308512326
 categories:
+<<<<<<< HEAD
   - 生活
+=======
+  - 未分类
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 tags:
   - shadowsocks
 ---

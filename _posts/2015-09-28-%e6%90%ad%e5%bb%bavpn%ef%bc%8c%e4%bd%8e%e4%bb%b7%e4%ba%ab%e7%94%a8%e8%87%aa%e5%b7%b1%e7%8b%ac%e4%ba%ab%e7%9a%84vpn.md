@@ -10,7 +10,11 @@ post_stats:
 dsq_thread_id:
   - 4308512616
 categories:
+<<<<<<< HEAD
   - coding
+=======
+  - 未分类
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 tags:
   - PPTP
   - VPN
@@ -28,7 +32,11 @@ VPN根据加密方式和协议等的不同分为好多种，目前主流用的�
 
 前面需要交代的是，PPTP这种类型的VPN其实并不安全，GFW是有办法看到你的内容并侦测到你所架设的VPN的，所以请不要用这种VPN做违法乱纪的事情哦。但是这种类型的VPN（PPTP）有其优点，就是适用范围广，链接速度快！这对于我们这种低依赖度的科学上网者已经足够了！
 
+<<<<<<< HEAD
 <span style="color: #ff0000;">第一步</span>，你需要有个自己的海外服务器，请参考我之前写的这篇文章 <http://simongong.net/2015/06/%E7%AE%80%E5%8D%95%E7%9A%84%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95%EF%BC%8C%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC%EF%BC%8C%E6%9C%80%E6%96%B9%E4%BE%BF%E4%B9%8B%E9%80%89/>
+=======
+<span style="color: #ff0000;">第一步</span>，你需要有个自己的海外服务器，请参考我之前写的这篇文章 <http://simongong.net/archives/94>
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 
 <span style="color: #ff0000;">第二步</span>，请先检查你的VPS是否支持搭建VPN
 
@@ -99,3 +107,7 @@ chmod a+x vpn_centos6.sh
     至此，VPN已经搭建完成，用你的手机或电脑连接试试看，享受无界的自由网络吧！
   </p>
 
+<<<<<<< HEAD
+=======
+ [1]: http://7xind4.com1.z0.glb.clouddn.com/uploads/2015/09/QQ-image-20150928111256.png
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412

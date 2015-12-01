@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 ite/
 _drafts/
 .DS_Store
 .idea/
 /_site
 
+=======
+_site
+.sass-cache
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412

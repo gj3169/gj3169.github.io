@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="baidu-site-verification" content="w9Akh6dPe4" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -20,3 +21,48 @@
 <link href="/pages/rss.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
 
+=======
+<header>
+
+<!-- navbar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <p class="navbar-text">I think, therefore I am</p>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+        {% if page.url == "/index.html" %}
+          <li class="active">
+          {% else %}
+          <li>
+        {% endif %}
+          <a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-th-large"></span> Blog</a></li>
+
+        {% for p in site.pages %}
+          {% if p.title %}
+            {% if p.url == page.url %}
+              <li class="active">
+              {% else %}
+              <li>
+            {% endif %}
+            <a href="{{ p.url | prepend: site.baseurl }}"><span class="glyphicon {{ p.icon }}"></span> {{ p.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>
+>>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
