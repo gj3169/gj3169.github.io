@@ -1,6 +1,6 @@
 ### 我的博客
 
-地址：[http://simongong.net](http://simongong.net)
+地址：[http://blog.simongong.net](http://blog.simongong.net)
 
 
 ### 安装说明
