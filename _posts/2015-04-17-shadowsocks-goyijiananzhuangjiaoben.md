@@ -8,11 +8,7 @@ views:
 post_stats:
   - 1
 categories:
-<<<<<<< HEAD
   - coding
-=======
-  - 未分类
->>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 tags:
   - centos
   - debian

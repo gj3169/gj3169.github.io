@@ -10,11 +10,7 @@ travelify_sidebarlayout:
 tc-thumb-fld:
   - 'a:2:{s:9:"_thumb_id";i:56;s:11:"_thumb_type";s:10:"attachment";}'
 categories:
-<<<<<<< HEAD
   - 脑洞
-=======
-  - Mail
->>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 tags:
   - 直角
   - 钝角

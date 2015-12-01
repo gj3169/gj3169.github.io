@@ -8,11 +8,7 @@ views:
 tc-thumb-fld:
   - 'a:2:{s:9:"_thumb_id";b:0;s:11:"_thumb_type";s:10:"attachment";}'
 categories:
-<<<<<<< HEAD
   - news
-=======
-  - 未分类
->>>>>>> 801dda2e9226335e7ae5589150473c116b8d2412
 tags:
   - google
   - 打不开
