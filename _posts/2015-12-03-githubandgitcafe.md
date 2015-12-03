@@ -36,10 +36,10 @@ Gitcafe是国内一家提供与github相同服务的公司。gitcafe现在已经
 
 注意
 
-  -gitcafe目前只支持CNAME的DNS记录
-  -github pages 可以支持A记录
-  -CNAME记录会与顶级域名的邮箱DNS冲突
-  -顶级域名的CNAME记录会与A记录冲突
+  1.gitcafe目前只支持CNAME的DNS记录
+  2.github pages 可以支持A记录
+  3.CNAME记录会与顶级域名的邮箱DNS冲突
+  4.顶级域名的CNAME记录会与A记录冲突
 
 西蒙宫的博客是有自己域名邮箱的，所以就不能用顶级域名的CNAME了，所以将[blog.simongong.net](http://blog.simongong.net)这个二级域名CNAME到gitcafe和github喽，后果是之前的SEO努力全白费了，这也没有办法。百度上，本站已经被K站，痛心不已。
 
@@ -52,4 +52,5 @@ Gitcafe是国内一家提供与github相同服务的公司。gitcafe现在已经
 奇云测的结果如下，大多数省都可以是绿色的了，速度还不错
 
 ![奇云测结果](http://i.imgur.com/Ddg9SPF.png)
+
 测试时间：2015-12-03 22:15
