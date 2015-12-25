@@ -23,7 +23,6 @@ win7 32位系统，无登录密码，无杀毒软件，装有teamviewer，设置
 
 ``
 All your files encrypted with strong encryption.
-
 To unlock your files you must pay 1 bitcoin to address :
 1GvQ9GsMgwAUz91PKNpAJxrAwsztg1S7jy
 Search google for how to buy and send bitcoin.
