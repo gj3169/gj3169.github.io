@@ -21,7 +21,7 @@ win7 32位系统，无登录密码，无杀毒软件，装有teamviewer，设置
 
 ##木马作者留下的勒索信
 
-``
+```
 All your files encrypted with strong encryption.
 To unlock your files you must pay 1 bitcoin to address :
 1GvQ9GsMgwAUz91PKNpAJxrAwsztg1S7jy
@@ -34,7 +34,7 @@ use all email to communicate
 with the information of username and pcname and the time you send bitcoins.
 When we will confirme the transaction you will receive decryption key and decryption program.
 You have 5 days to make transaction after that your decryption key will be deleted.And your files gone forever.
-``
+```
 
 信中提到了他们的比特币地址，很难追查。希望有能力的人能够追查到他们，法网恢恢，疏而不漏！缺德事做多了总有报应！
 
