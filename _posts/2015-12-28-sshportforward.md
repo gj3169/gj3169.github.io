@@ -25,10 +25,12 @@ tags:
 ##端口转发实现
 
 ssh的三个强大的端口转发命令：
-转发到远端：ssh -C -f -N -g -L 本地端口:目标IP:目标端口 用户名@目标IP
-转发到本地：ssh -C -f -N -g –R 本地端口:目标IP:目标端口 用户名@目标IP
 
-`ssh -C -f -N -g -D listen_port user@Tunnel_Host`
+转发到远端：`ssh -C -f -N -g -L 本地端口:目标IP:目标端口 用户名@目标IP`
+
+转发到本地：`ssh -C -f -N -g –R 本地端口:目标IP:目标端口 用户名@目标IP`
+
+动态转发：`ssh -C -f -N -g -D listen_port user@Tunnel_Host`
 
 `-C`：压缩数据传输。
 
