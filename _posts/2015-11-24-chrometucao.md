@@ -4,8 +4,8 @@ layout: post
 categories:
   - 吐槽
 tags:
-  -chrome
-  -吐槽
+  - chrome
+  - 吐槽
 ---
 ![chrome截图](http://7xind4.com1.z0.glb.clouddn.com/jekyllQQ截图20151124221512.png)
 显示器分辨率：1920*1080
