@@ -3,11 +3,11 @@ title: SSH端口转发笔记(ipv6 与 端口映射)
 layout: post
 description: 端口转发或隧道，是一种通过SSH转发本来不安全的TCP通信的安全保护罩。您可以保护例如POP3，SMTP和HTTP连接，否则可能是不安全的。网络上什么人都有！
 categories:
-  -coding
+  - coding
 tags: 
-  -ssh
-  -端口转发
-  -运维
+  - ssh
+  - 端口转发
+  - 运维
 ---
 
 ##端口转发概念
