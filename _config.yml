@@ -35,7 +35,7 @@ ga:
   id: UA-70866141-1
   url: auto
 #
-
+gems: [jekyll-paginate]
 # disqus 设置
 disqus:
   shortname: simongong
