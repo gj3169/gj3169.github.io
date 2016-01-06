@@ -2,8 +2,7 @@
 title: 网站同时部署github和gitcafe
 layout: post
 description: Gitcafe是国内一家提供与github相同服务的公司。gitcafe现在已经提供了与github pages相同的网页服务功能，国内访问速度超快，同样支持jekyll。于是出现了这个想法，就是让国内用户访问时能够直接进入gitcafe的服务器，国外的网友可以直接访问github的服务器。同时可以解决百度蜘蛛无法爬取github服务的缺陷，改善网站的SEO。
-categories:
-  -建站技巧
+categories:建站技巧
 tags: 
   -github
   -gitcafe
