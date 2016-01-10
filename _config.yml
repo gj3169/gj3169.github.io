@@ -1,40 +1,61 @@
-# Site settings
-title: 西蒙宫的博客
-description: I think, therefore I am.
-disqus_shortname: simongong
-url:              //gj3169.github.io, http://blog.simongong.net/
-twitter_username: simon_gong
-github_username:  gj3169
-##########################
-owner:
-  name:           西蒙宫
-  avatar:         avatar.jpg
-  bio:            "I think, therefore I am."
-  email:          ximenggong@outlook.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        simon_gong
-  facebook:       
-  github:         gj3169
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:    +yourid
+# Site wide configuration
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-70866141-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+title:            西蒙宫的博客
+locale:           en_US
+url:			  http://blog.simongong.net/
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Shanghai
-future:      true
-pygments:    true
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
 markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
-# Amount of posts to show on home page
-paginate: 5
-################################
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: 西蒙宫
+  avatar: avatar.jpg
+  bio: "I think, therefore I am."
+  email:ximenggong@outlook.com
+  disqus-shortname:simongong
+  twitter: simon_gong
+  facebook: #username
+  google:
+    plus: #username
+    analytics:UA-70866141-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: gj3169
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
