@@ -10,38 +10,13 @@ github_username:  gj3169
 # Build settings
 #markdown: kramdown
 permalink: /:year/:month/:day/:title.html   #博文的固定链接
-author:                                     #自定义常亮
-  name: 西蒙宫
-  email: ximenggong@outlook.com
-  link: http://blog.simongong.net/
-  weibo: http://weibo.com/kiteoftime
-  github: http://github.com/gj3169
-title: 西蒙宫的博客                            #自定义常量
-
-# avatar头像及Favicon
-avatar: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
-favicon: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
-#https://avatars1.githubusercontent.com/u/5010799?v=3&amp;s=460
-locals:                                     #自定义常量
-  tags: 标签
-  about: 关于
-active: 技术                                 #自定义常量
-subscribe_rss: /pages/atom.xml              #订阅地址
+# Build settings
 markdown: kramdown
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
-highlighter: pygments
-redcarpet:
-    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 
-# google analytics 设置
-ga:
-  id: UA-70866141-1
-  url: auto
-#
-gems: [jekyll-paginate]
-# disqus 设置
-disqus:
-  shortname: simongong
+highlighter: pygments
+
+# YB Settings
 excerpt_separator: <!-- more -->
 paginate: 4
 comments: false
