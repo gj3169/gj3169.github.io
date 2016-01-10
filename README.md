@@ -1,25 +1,36 @@
-# Minimal Mistakes
+### 我的博客
 
-**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog.
+地址：[http://blog.simongong.net](http://blog.simongong.net)
 
-**Jekyll 3 Update:** A version of Minimal Mistakes compatible with Jekyll 3 can be found in the [`jekyll3` branch](https://github.com/mmistakes/minimal-mistakes/tree/jekyll3). GitHub Pages is [locked at version 2.4](https://pages.github.com/versions/) so some keep that in mind if you're trying to use 3.0 features that aren't supported there yet.
 
-## Minimal Mistakes is all about:
+### 安装说明
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
+1. fork库到自己的github
+2. 修改名字为：`username.github.io`
+3. clone库到本地，参考`_posts`中的目录结构自己创建适合自己的文章目录结构
+4. 修改CNAME，或者删掉这个文件，使用默认域名
+5. 修改`_config.yml`配置项
+6. 修改或删除footer最后的百度站点统计
+7. It's done!
 
-![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
+**注意:**
 
-See a [live version of Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) hosted on GitHub.
+fork程序后如果要保留我的文章，请注明出处。
 
-## Getting Started
+github博客系统使用的是jekyll搭建的，关于博客详细搭建，可以参考原作者的文章：[在github上搭建jekyll博客](http://liuyanwei.jumppo.com/2014/02/12/how-to-deploy-a-blog-on-github-by-jekyll.html)
 
-Minimal Mistakes takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
 
-To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/minimal-mistakes/theme-setup/) for more information.
+### 更新内容
+[x]  增加文章搜索功能
+[x]  增加SEO优化和站点地图功能
+[x]  修改网站最低支持的ie版本，从最低ie9改到最低ie8
+[]  增加分享功能
+[]  添加github连接图标
+
+### 其他支持
+
+-jumppo图床网站，基于html5和php
+jekyll博客发布图片时只能外链，所以为了配合这个博客，整了一个简单的图床程序，地址：[https://github.com/coolnameismy/ImagesUploadWebSite](https://github.com/coolnameismy/ImagesUploadWebSite)
+
+
+

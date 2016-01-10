@@ -1,61 +1,43 @@
-# Site wide configuration
+# Site settings
+title: 西蒙宫的博客
+email: ximenggong@outlook.com
+description: I think, therefore I am.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.simongong.net/" # the base hostname & protocol for your site
+twitter_username: simon_gong
+github_username:  gj3169
 
-title:            西蒙宫的博客
-locale:           en_US
-url:			  //gj3169.github.io, http://blog.simongong.net/
-
-
-# Jekyll configuration
-
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: pygments
-sass:
-  sass_dir: _sass
-  style: compressed
-gems:
-  - jekyll-sitemap
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-
-# Site owner
-owner:
+# Build settings
+#markdown: kramdown
+permalink: /:year/:month/:day/:title.html   #博文的固定链接
+paginate: 10                                #分页时每页博文数量
+author:                                     #自定义常亮
   name: 西蒙宫
-  avatar: avatar.jpg
-  bio: "I think, therefore I am."
-  email:ximenggong@outlook.com
-  disqus-shortname:simongong
-  twitter: simon_gong
-  facebook: #username
-  google:
-    plus: #username
-    analytics:UA-70866141-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: gj3169
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+  email: ximenggong@outlook.com
+  link: http://blog.simongong.net/
+  weibo: http://weibo.com/kiteoftime
+  github: http://github.com/gj3169
+title: 西蒙宫的博客                            #自定义常量
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+# avatar头像及Favicon
+avatar: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
+favicon: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
+#https://avatars1.githubusercontent.com/u/5010799?v=3&amp;s=460
+locals:                                     #自定义常量
+  tags: 标签
+  about: 关于
+active: 技术                                 #自定义常量
+subscribe_rss: /pages/atom.xml              #订阅地址
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+
+# google analytics 设置
+ga:
+  id: UA-70866141-1
+  url: auto
+#
+gems: [jekyll-paginate]
+# disqus 设置
+disqus:
+  shortname: simongong
