@@ -10,7 +10,6 @@ github_username:  gj3169
 # Build settings
 #markdown: kramdown
 permalink: /:year/:month/:day/:title.html   #博文的固定链接
-paginate: 10                                #分页时每页博文数量
 author:                                     #自定义常亮
   name: 西蒙宫
   email: ximenggong@outlook.com
@@ -28,7 +27,9 @@ locals:                                     #自定义常量
   about: 关于
 active: 技术                                 #自定义常量
 subscribe_rss: /pages/atom.xml              #订阅地址
-markdown: redcarpet
+markdown: kramdown
+exclude: ['node_modules', 'Gruntfile.js', 'package.json']
+highlighter: pygments
 redcarpet:
     extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 
@@ -41,3 +42,6 @@ gems: [jekyll-paginate]
 # disqus 设置
 disqus:
   shortname: simongong
+excerpt_separator: <!-- more -->
+paginate: 4
+comments: false
