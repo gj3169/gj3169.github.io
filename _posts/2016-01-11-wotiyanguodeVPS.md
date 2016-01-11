@@ -11,7 +11,7 @@ tags:
   - VPS
 ---
 
-[VPS图片](http://i.imgur.com/EA3S7vW.png)
+![VPS图片](http://i.imgur.com/EA3S7vW.png)
 
 ##什么是VPS
 
