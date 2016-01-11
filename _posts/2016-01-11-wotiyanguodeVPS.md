@@ -29,7 +29,7 @@ VPS([Virtual private server](https://en.wikipedia.org/wiki/Virtual_private_serve
 
 ###[DigitalOcean](https://m.do.co/t/e83ef282b022)VPS
 
-[DigitalOcean](https://m.do.co/t/e83ef282b022)VPS胜在有SSD硬盘，并且是Xen架构的，完全不会超卖，硬盘容量很大。512M的VPS带有20G硬盘，每月5美元，完全够用了。机房地址有美国和新加坡，我用的美国的机房，感觉速度还可以，用来搭建wordpress博客不会卡。如果有兴趣可以用我提供的链接，你可以得到10美元优惠 https://m.do.co/t/e83ef282b022 ，我也多一些积分。
+[DigitalOcean](https://m.do.co/t/e83ef282b022)VPS胜在有SSD硬盘，并且是Xen架构的，完全不会超卖，硬盘容量很大。512M的VPS带有20G硬盘，每月5美元，完全够用了。机房地址有美国和新加坡，我用的美国的机房，感觉速度还可以，用来搭建wordpress博客不会卡。[速度测试](http://speedtest-sfo1.digitalocean.com/)。如果有兴趣可以用我提供的链接，你可以得到10美元优惠 https://m.do.co/t/e83ef282b022 ，我也多一些积分。
 
 ##总结
 
