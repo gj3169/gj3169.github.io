@@ -11,6 +11,8 @@ tags:
   - VPS
 ---
 
+[VPS图片](http://i.imgur.com/EA3S7vW.png)
+
 ##什么是VPS
 
 VPS([Virtual private server](https://en.wikipedia.org/wiki/Virtual_private_server))是一台云端的服务器，一般是linux系统，可以架设网站，可以架设web服务，可以用来“科学上网”，可以用来[端口映射](http://blog.simongong.net/2015/12/28/sshportforward.html)，功能有很多，玩法也很多。提供VPS服务的商家也有很多，国内有百度云、阿里云、新浪云，还有京东云等，国外有[搬瓦工](https://bandwagonhost.com/aff.php?aff=3558)，[DigitalOcean](https://m.do.co/t/e83ef282b022)等等很多。让人眼花缭乱不知道该怎么选。
