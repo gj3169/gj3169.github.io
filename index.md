@@ -6,9 +6,8 @@ description: 西蒙宫的个人博客，对技术、编程、互联网非常感�
 
 ## 推荐文章
 ----
-**[简便易行搭建VPN](http://blog.simongong.net/2015/06/%E7%AE%80%E5%8D%95%E7%9A%84%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95%EF%BC%8C%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC%EF%BC%8C%E6%9C%80%E6%96%B9%E4%BE%BF%E4%B9%8B%E9%80%89/)**
-
-[我体验过的VPS](http://blog.simongong.net/2016/01/11/wotiyanguodeVPS.html)
+ - **[简便易行搭建VPN](http://blog.simongong.net/2015/06/%E7%AE%80%E5%8D%95%E7%9A%84%E6%A2%AF%E5%AD%90%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95%EF%BC%8C%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC%EF%BC%8C%E6%9C%80%E6%96%B9%E4%BE%BF%E4%B9%8B%E9%80%89/)**
+ - [我体验过的VPS](http://blog.simongong.net/2016/01/11/wotiyanguodeVPS.html)
 
 ## 对博客的理解
 ----
