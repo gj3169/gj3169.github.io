@@ -1,69 +1,43 @@
-title:            西蒙宫的博客
-description:      I think, therefore I am.
-disqus_shortname: simongong
-reading_time:     true
-words_per_minute: 200
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
-url: "http://blog.simongong.net/"
+# Site settings
+title: 西蒙宫的博客
+email: ximenggong@outlook.com
+description: I think, therefore I am.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blog.simongong.net/" # the base hostname & protocol for your site
+twitter_username: simon_gong
+github_username:  gj3169
 
-# Owner/author information
-owner:
-  name:           西蒙宫
-  avatar:         avatar.jpg
-  bio:            "I think, therefore I am."
-  email:          ximenggong@outlook.com
-  # Social networking links used in footer. Update and remove as you like.
-  twitter:        simon_gong
-  facebook:       
-  github:         gj3169
-  stackexchange:  
-  linkedin:       
-  instagram:      
-  flickr:         
-  tumblr:         
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:    
+# Build settings
+#markdown: kramdown
+permalink: /:year/:month/:day/:title.html   #博文的固定链接
+paginate: 10                                #分页时每页博文数量
+author:                                     #自定义常亮
+  name: 西蒙宫
+  email: ximenggong@outlook.com
+  link: http://blog.simongong.net/
+  weibo: http://weibo.com/kiteoftime
+  github: http://github.com/gj3169
+title: 西蒙宫的博客                            #自定义常量
 
-# Background image to be tiled on all pages
-background: 
+# avatar头像及Favicon
+avatar: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
+favicon: http://7xind4.com1.z0.glb.clouddn.com/jekyllfavicon.ico
+#https://avatars1.githubusercontent.com/u/5010799?v=3&amp;s=460
+locals:                                     #自定义常量
+  tags: 标签
+  about: 关于
+active: 技术                                 #自定义常量
+subscribe_rss: /pages/atom.xml              #订阅地址
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-70866141-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Shanghai
-future:      true
-highlighter: pygments
-markdown:    kramdown
-gems:
-  - jekyll-sitemap
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:year/:month/:day/:title.html
-
-# Amount of post to show on home page
-paginate: 5
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: true
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+# google analytics 设置
+ga:
+  id: UA-70866141-1
+  url: auto
+#
+gems: [jekyll-paginate]
+# disqus 设置
+disqus:
+  shortname: simongong
