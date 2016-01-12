@@ -1,7 +1,7 @@
 ---
 title: 笔记本安装ubuntu
 layout: post
-description: 鄙人也算入门站长了，接触过搬瓦工VPS和DO的VPS，自己有些体验，希望与您一起分享。
+description: 折腾jekyll好久了，对目前的主题也挺喜欢，但忍不住还是想去尝试更多的主题，但无奈windows上装ruby啊，gem啊，各种出问题，累觉不爱，遂决定为09年买的笔记本装一下ubuntu，希望在linux系统上操作相关的jekyll什么的，能够顺利一些。
 categories:
   - coding
 tags: 
@@ -15,7 +15,7 @@ tags:
 
 ##为何要在笔记本上装ubuntu
 
-折腾jekyll好久了，对目前的主题也挺喜欢，但忍不住还是想去尝试更多的主题，但无奈windows上装ruby啊，gem啊，各种出问题，累觉不爱，遂决定为09年买的笔记本装一下ubuntu，希望在linux系统上操作相关的jekyll什么的，能够顺利一些。
+折腾jekyll好久了，对目前的主题也挺喜欢，但忍不住还是想去尝试更多的主题，但无奈windows上装ruby啊，gem啊，各种出问题，累觉不爱，遂决定为09年买的联想G450笔记本装一下ubuntu，希望在linux系统上操作相关的jekyll什么的，能够顺利一些。
 
 ##制作ubuntu安装u盘
 
