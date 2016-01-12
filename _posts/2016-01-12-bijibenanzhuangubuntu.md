@@ -24,6 +24,7 @@ tags:
 ##安装过程
 
 ![ubuntu安装](http://i.imgur.com/WCiPqu7.jpg)
+
 按照步骤一步一步来，ubuntu的安装过程还是挺简单的。
 
 ##安装完毕遇到问题
@@ -36,6 +37,7 @@ google之，找到一篇帖子，写macbook pro装ubuntu系统，wifi不能用�
  1. 安装完成后，wifi就神奇的有了。
  
 折腾结束。
+
 ![wifi有了](http://i.imgur.com/rg0Zpp2.jpg)
 
 ##总结
