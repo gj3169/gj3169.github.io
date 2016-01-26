@@ -26,10 +26,15 @@ socat是一种TCP或UDP流量转发工具，可以本机转发给本机，也可
 `nohup socat TCP4-LISTEN:22,reuseaddr,fork TCP6:[....:....:....:....:....:::...]:3389 &`
 
 其中
+
 `nohup` 是为了让socat后台运行，最后的`&`也是后台运行，熟悉linux的人对他们很熟了。
+
 `TCP4-LISTEN`指明了ipv4的本机监听端口，
+
 `reuseaddr`的意义是“Allows other sockets to bind to an address even if parts of it (e.g. the local port) are already in use by socat (example).”
+
 `fork`意义是“After establishing a connection, handles its channel in a child process and keeps the parent process attempting to produce more connections, either by listening or by connecting in a loop”
+
 `TCP6`指明转发的ipv6地址
 
 ##与SSH做比较##
