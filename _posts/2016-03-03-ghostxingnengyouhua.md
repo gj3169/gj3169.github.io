@@ -1,7 +1,7 @@
 ---
 title: Ghost性能优化（改变nginx设置以加快加载速度）
 layout: post
-description: 我们希望缓存Ghost的响应，第一步就是设置一个`proxy_cache_path`.下面的代码设置了一个75M空间，并且如果文件24小时没有被访问就会被删除的缓存空间。
+description: 我们希望缓存Ghost的响应，第一步就是设置一个proxy_cache_path.下面的代码设置了一个75M空间，并且如果文件24小时没有被访问就会被删除的缓存空间。
 categories:
   - coding
 tags: 
