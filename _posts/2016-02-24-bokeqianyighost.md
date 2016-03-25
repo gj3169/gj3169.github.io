@@ -1,5 +1,5 @@
 ---
-title: 折腾-博客迁移到GHOST
+title: 【折腾】博客迁移到GHOST
 layout: post
 description: Jekyll是基于Markdown进行写作的。将Jekyll的文章通过RSS导入Wordpress时，文内依然是各种Markdown符号，而不是生成的Html文件。
 categories:
